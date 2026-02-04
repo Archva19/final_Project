@@ -1,0 +1,1071 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui;
+  line-height: 1.34;
+}
+
+a,
+button {
+  cursor: pointer;
+}
+
+.sp_scaleBtn:active {
+  transform: scale(0.95);
+  transition:
+    0.2s cubic-bezier(0.08, 0.52, 0.52, 1),
+    0.2s cubic-bezier(0.08, 0.52, 0.52, 1),
+    0.2s cubic-bezier(0.08, 0.52, 0.52, 1);
+}
+
+.profileWind {
+  transition: all 0.2s ease-out;
+  border: 1px solid #dedfe1;
+  background-color: transparent;
+  position: relative;
+  border-radius: 8px;
+}
+
+.profileWind:hover {
+  transform: scale(1.02);
+  box-shadow:
+    0 2px 4px #0000001a,
+    0 8px 16px #0000001a;
+}
+
+.profileWindImg {
+  width: 160px;
+  height: 160px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  display: block;
+}
+
+.profileWindName {
+  background-color: white;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  padding: 12px;
+  text-align: center;
+  height: 46px;
+  display: block;
+  font-size: 18px;
+  line-height: 22px;
+  text-overflow: ellipsis;
+}
+
+.ProfDelBtn {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 16px;
+  height: 16px;
+  background-color: #9e9fa2;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ProfDelIcon {
+  width: 15px;
+  height: 15px;
+  background-image: url(icons/sp_icons.png);
+  background-repeat: no-repeat;
+  background-size: 43px 77px;
+  background-position: 1.3px -63px;
+  transform-origin: bottom right;
+}
+
+.ProfDelBtnSc {
+  top: -3px;
+  left: -3px;
+  width: 25px;
+  height: 25px;
+  background-color: white;
+  box-shadow:
+    0 2px 4px #0000001a,
+    0 8px 16px #0000001a;
+  transition: all 0.2s ease-out;
+}
+
+.ProfDelIconSc {
+  background-position: -24px -45.8px;
+}
+
+.AccAddIcon {
+  background-image: url(icons/sp_icons.png);
+  background-size: 43px 77px;
+  background-repeat: no-repeat;
+  display: inline-block;
+  background-position: 0 0;
+  width: 42px;
+  height: 42px;
+}
+
+.accDelMessMain {
+  z-index: 1;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: -35px;
+  left: -15px;
+  background-color: #282828;
+  color: white;
+  width: 200px;
+  height: 26px;
+  border-radius: 2px;
+}
+
+.accDelMessArr {
+  background-color: #282828;
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  transform: rotate(45deg);
+  top: -17.5px;
+}
+
+.sp_mainContent {
+  background-color: #f3f4f7;
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  padding-top: 92px;
+  padding-bottom: 198px;
+  min-width: 900px;
+}
+
+.sp_left {
+  padding-right: 32px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sp_logoBox {
+  padding: 112px 0 16px;
+}
+
+.sp_logo {
+  margin: -28px;
+  width: 320.94px;
+}
+
+.sp_quote {
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 32px;
+  width: 500px;
+  color: #1c1e21;
+  padding-bottom: 20px;
+}
+
+.sp_form {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 0 24px 0;
+  background-color: #fff;
+  border: none;
+  border-radius: 8px;
+  box-shadow:
+    0 2px 4px #0000001a,
+    0 8px 16px #0000001a;
+  width: 396px;
+}
+
+.sp_inputBox {
+  margin: auto;
+  padding: 6px 0;
+  font-size: 17px;
+  width: 364px;
+}
+
+.sp_passInpBox {
+  position: relative;
+}
+
+.sp_input {
+  border-radius: 6px;
+  border: 1px solid #dddfe2;
+  padding: 14px 16px;
+  width: 100%;
+  font-size: 17px;
+}
+
+.sp_input::placeholder {
+  color: #90949c;
+}
+
+.sp_input:focus {
+  border: 2px solid #e5f3ff;
+  outline: 1px solid #0b66ff;
+}
+
+.sp_input:focus::placeholder {
+  color: #bec3ca;
+}
+
+.sp_passVisBtn {
+  height: 28px;
+  width: 28px;
+  position: absolute;
+  top: 18px;
+  right: 8px;
+  border: none;
+  background-color: transparent;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sp_passVisBtn:hover {
+  background-color: #f2f2f2;
+}
+
+.sp_passVisIcon {
+  height: 16px;
+  width: 16px;
+}
+
+.sp_logInBtnBox {
+  padding-top: 6px;
+  text-align: center;
+}
+
+.sp_logInBtn {
+  box-sizing: content-box;
+  background-color: #0866ff;
+  border: none;
+  border-radius: 6px;
+  font-size: 20px;
+  line-height: 48px;
+  padding: 0 16px;
+  width: 332px;
+  padding: 0 16px;
+  color: white;
+  font-weight: 700;
+}
+
+.sp_logInBtn:hover {
+  background-color: #1b76f1;
+}
+
+.sp_forgotPassBtnBox {
+  margin-top: 16px;
+  text-align: center;
+}
+
+.sp_forgotPassBtn {
+  color: #0866ff;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.sp_forgotPassBtn:hover {
+  text-decoration: underline;
+}
+
+.sp_decoLine1 {
+  align-items: center;
+  border-bottom: 1px solid #dadde1;
+  display: flex;
+  margin: 20px 16px;
+  text-align: center;
+  width: 90%;
+}
+
+.sp_newAccBtnBox {
+  padding-top: 6px;
+}
+
+.sp_newAccBtn {
+  display: inline-block;
+  background-color: #42b72a;
+  font-weight: 700;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 17px;
+  line-height: 48px;
+  padding: 0 16px;
+  height: 48px;
+  text-decoration: none;
+}
+
+.sp_newAccBtn:hover {
+  background-color: #38a321;
+}
+
+.sp_pageCreateBtn {
+  color: #1c1e21;
+  font-size: 14px;
+  font-weight: 400;
+  margin-top: 28px;
+  text-align: center;
+}
+
+.sp_pageCreateBtnLink {
+  color: #1c1e21;
+  font-weight: 600;
+}
+
+.sp_pageCreateBtnLink:hover {
+  text-decoration: underline;
+}
+
+.sp_footer,
+.li_footer {
+  color: #8a8d91;
+  font-size: 12px;
+  padding-top: 20px;
+  padding-inline: 40px;
+  margin: 0 auto;
+  max-width: 980px;
+}
+
+.li_footer {
+  padding-top: 150px;
+}
+
+.sp_languages {
+  padding-top: 8px;
+  display: flex;
+  gap: 10px;
+}
+
+.sp_language {
+  border: none;
+  background-color: transparent;
+  color: inherit;
+  font-size: inherit;
+}
+
+.sp_language:hover {
+  text-decoration: underline;
+}
+
+.sp_langChosen {
+  color: #727272;
+}
+
+.sp_links {
+  display: flex;
+  gap: 20px;
+}
+
+.sp_links a {
+  text-decoration: none;
+}
+
+.sp_links a:hover {
+  text-decoration: underline;
+}
+
+.sp_links a:visited {
+  color: #8a8d91;
+  text-decoration: none;
+}
+
+.sp_copyright {
+  margin: 20px 0;
+}
+
+.sp_decoLine2 {
+  border-bottom: 1px solid #dddfe2;
+  height: 8px;
+  margin-bottom: 8px;
+  width: 100%;
+}
+
+.sp_mobile {
+  display: none;
+  position: relative;
+}
+
+.sp_logoLogInHis {
+  width: 211.94px;
+  height: 70px;
+  margin: -20px;
+}
+
+.sp_logoBoxLogInHis {
+  padding: 8px 0 16px;
+}
+
+.sp_leftLogInHist {
+  width: 584px;
+}
+
+.recentLoginsProfiles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18.66px;
+}
+
+.sp_accAddWind {
+  width: 100vw;
+  height: 100vh;
+  background-color: #0006;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+}
+
+.sp_accAddForm {
+  position: relative;
+  background-color: white;
+  border-radius: 3px;
+  padding: 16px;
+  text-align: center;
+  box-shadow:
+    0 2px 26px #0000004d,
+    0 0 0 1px #0000001a;
+  font-size: 14px;
+  line-height: 18px;
+  margin-top: -25px;
+}
+
+.sp_accAddTxt {
+  font-size: 20px;
+  line-height: 24px;
+  padding: 6px 0 12px 36px;
+  text-align: center;
+}
+
+.sp_accAddDecoLine {
+  background: #dadde1;
+  border-width: 0;
+  color: #dadde1;
+  height: 1px;
+  margin: 7px 0;
+}
+
+.sp_passRememBox {
+  display: flex;
+  padding: 6px 0 20px;
+  gap: 12px;
+  align-items: center;
+}
+
+.sp_passRememBtn {
+  border: 1px solid #d7dade;
+  border-radius: 4px;
+  height: 18px;
+  width: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sp_passRememTxt {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #606770;
+}
+
+.sp_addAccLogInBtnBox {
+  margin-bottom: 8px;
+  padding: 0;
+}
+
+.sp_addAccLogInBtn {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 40px;
+}
+
+.sp_accAddforgPassBtnBox {
+  padding: 10px 0;
+  margin: 0;
+}
+
+.sp_accAddforgPassBtn {
+  font-size: 17px;
+  line-height: 20px;
+}
+
+.sp_accAddWindClBtn {
+  position: absolute;
+  background-color: #ebedf0;
+  border: none;
+  border-radius: 50%;
+  height: 36px;
+  text-align: center;
+  width: 36px;
+  top: 12px;
+  right: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sp_accAddWindClBtn:hover {
+  background-color: #dbdde1;
+}
+
+.sp_accAddWindClIcon {
+  background-position: 0 -43px;
+  background-image: url(icons/sp_icons.png);
+  background-size: 43px 77px;
+  background-repeat: no-repeat;
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+}
+
+.sp_background {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.sp_profileWindowLogInProfImg {
+  width: 160px;
+  height: 160px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  margin: 44px auto 0 auto;
+}
+
+.sp_profileWindowLogInTxt {
+  font-size: 17px;
+  line-height: 20px;
+  padding: 4px 0 14px;
+}
+
+.sp_profileWindowPassInpBox {
+  padding: 6px 0;
+}
+
+.sp_profileWindowPassRememBtn {
+  border: 1px solid #d7dade;
+  border-radius: 4px;
+  height: 18px;
+  width: 18px;
+}
+
+.sp_profileWindowlogInBtn {
+  background-color: #0866ff;
+  border: none;
+  border-radius: 6px;
+  width: 100%;
+  color: white;
+}
+
+@media (max-width: 1075px) {
+  .sp_mainContent {
+    padding-inline: 40px;
+    padding-bottom: 150px;
+    min-width: 500px;
+  }
+  .sp_quote {
+    font-size: 24px;
+    line-height: 28px;
+    width: 368px;
+  }
+  .sp_footer {
+    margin: 0 40px;
+  }
+}
+
+@media (max-width: 900px) {
+  .sp_mainContent {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+  }
+
+  .sp_left {
+    padding-right: 0;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .sp_logoBox {
+    padding-top: 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  .sp_logo {
+    margin: -28px;
+    width: 320.94px;
+  }
+
+  .sp_quote {
+    text-align: center;
+    padding: 0;
+  }
+
+  .sp_footer {
+    min-width: 400px;
+  }
+
+  .sp_leftLogInHist {
+    width: 500px;
+  }
+
+  .recentLoginsProfiles {
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 500px) {
+  .sp_mainContent {
+    display: none;
+  }
+
+  .sp_footer {
+    display: none;
+  }
+
+  .sp_mobile {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.sp_mobile {
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 16px 14px;
+  height: 100%;
+}
+
+.sp_mobileLanguageBtn {
+  border: none;
+  background-color: transparent;
+  font-size: 13.5px;
+  font-size: 13.5px;
+  font-weight: 400;
+  color: rgb(93, 108, 123);
+}
+
+.sp_mobileLogoBox {
+  min-height: 94.63px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  height: 30vh;
+}
+
+.sp_mobileLogo {
+  height: 60px;
+  width: 60px;
+}
+
+.sp_mobile_inpBox {
+  position: relative;
+  width: 100%;
+  height: 63.3px;
+  margin-top: 12px;
+  overflow: hidden;
+}
+
+.sp_mobile_inpAddPh {
+  position: absolute;
+  display: inline-block;
+  width: 375px;
+  opacity: 0;
+  top: 11px;
+  left: 17px;
+  font-size: 13.5px;
+  padding-top: 0.625px;
+  padding-bottom: 0.625px;
+  color: rgba(93, 108, 123);
+  text-overflow: ellipsis;
+}
+
+.sp_mobileInp {
+  padding: 10px 16px;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgb(221, 226, 232);
+  border-radius: 16px;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.sp_mobileInp:focus {
+  border-color: rgba(93, 108, 123);
+  outline: none;
+}
+
+.sp_mobileInp::placeholder {
+  color: rgba(93, 108, 123);
+}
+
+.sp_mobileInp:focus::placeholder {
+  opacity: 0;
+}
+
+.sp_mobile_inpDeleteBtn {
+  position: absolute;
+  right: 24px;
+  top: 22px;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background-color: transparent;
+}
+
+.sp_mobile_inpDeleteBtnImg {
+  width: 100%;
+  height: 100%;
+  filter: drop-shadow(0px 100px 0 #5d6c7b);
+  transform: translateY(-100px);
+}
+
+.sp_passVisBtnMob {
+  width: 24px;
+  height: 24px;
+  right: 20px;
+  top: 20px;
+}
+
+.sp_passVisIconMob {
+  width: 100%;
+  height: 100%;
+  filter: drop-shadow(0px 100px 0 #5d6c7b);
+  transform: translateY(-100px);
+}
+
+.sp_mobileLogInBtn {
+  margin: 15px 0;
+  height: 44px;
+  width: 100%;
+  border-radius: 22px;
+  background-color: rgb(0, 100, 224);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(241, 244, 247);
+  border: none;
+  font-size: 15.2px;
+  font-weight: 500;
+}
+
+.sp_mobile_forgPass {
+  color: rgb(10, 19, 23);
+  font-size: 15.2px;
+  font-weight: 500;
+}
+
+.sp_mobileEnd {
+  height: 224.3px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.sp_mobileBtn {
+  height: 44px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgb(0, 100, 224);
+  border-radius: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 18px;
+  color: rgb(0, 100, 224);
+  font-size: 15.2px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.sp_mobileMetaLogo {
+  width: 60px;
+  height: 12px;
+  margin-bottom: 25px;
+}
+
+.sp_mobileLinks {
+  display: flex;
+  gap: 8px;
+  color: rgb(99, 120, 138);
+  font-size: 10px;
+}
+
+.sp_mobileLangWindow {
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(28, 43, 51, 0.8);
+}
+
+.sp_mobileLangSubWin {
+  position: absolute;
+  bottom: 0;
+  background-color: white;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  height: 70vh;
+  width: 100vw;
+  padding-inline: 15px;
+}
+
+.sp_mobileLangTouchBtn {
+  background-color: #748695;
+  border-radius: 2.5px;
+  height: 4px;
+  width: 36px;
+  margin-top: 12px;
+  z-index: 1;
+  margin: 12px auto 0 auto;
+}
+
+.sp_mobileLangCloseBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  border: none;
+  background-color: transparent;
+}
+
+.sp_mobileLangCloseImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.sp_mobileLangText {
+  font-size: 24px;
+  font-weight: 600;
+  color: rgb(10, 19, 23);
+  padding-top: 1.99844px;
+  padding-bottom: 7.99844px;
+  margin-bottom: 15px;
+}
+
+.sp_mobileLangBox {
+  width: 100%;
+  padding: 14px 16px;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgb(221, 226, 232);
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sp_mobileLangItem {
+  height: 56px;
+  width: 100%;
+  padding-inline: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sp_mobileLang {
+  font-size: 15.2px;
+  font-weight: 500;
+}
+
+.sp_mobileLangCb {
+  width: 22px;
+  height: 22px;
+}
+
+.sp_mobHideWhenLogged {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sp_mobShowWhenLogged {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.mob_actUserLogInWind {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 100px 15px 0 15px;
+  align-items: center;
+  justify-content: center;
+}
+
+.mob_actUserLogInWindBackArrBtn {
+  position: absolute;
+  top: 23px;
+  left: 15px;
+  height: 24px;
+  width: 24px;
+  border: none;
+  background-color: transparent;
+}
+
+.mob_actUserLogInWindBackArrIcon {
+  height: 24px;
+  width: 24px;
+}
+
+.mob_actUserLogInWindProfPict {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.mob_actUserLogInWindName {
+  font-size: 24px;
+  font-weight: 600;
+  color: rgb(10, 19, 23);
+  margin-bottom: 20px;
+}
+
+.mob_actUserLogInWindLogInBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 44px;
+  width: 100%;
+  border-radius: 22px;
+  outline: none;
+  border: none;
+  background: rgb(0, 100, 224);
+  border: 0px solid rgb(10, 19, 23);
+  color: white;
+  margin: 20px 0;
+}
+
+.mob_actUserLogInWindForgPassBtn {
+  font-size: 15.2px;
+  font-weight: 500;
+  color: rgb(10, 19, 23);
+}
+
+.li_page{
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.li_mainContent {
+  padding: 40px 0 80px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f3f4f7;
+}
+
+.li_logo {
+  width: 240px;
+  height: 79.27px;
+}
+
+.li_form {
+  width: 396px;
+  background-color: white;
+  box-shadow:
+    0 2px 4px #0000001a,
+    0 8px 16px #0000001a;
+  padding: 24px 16px 14px 16px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.li_formTxt {
+  font-size: 18px;
+  line-height: 22px;
+  margin-bottom: 30px;
+}
+
+.li_Inp {
+  border-radius: 6px;
+  font-size: 17px;
+  padding: 14px 16px;
+  width: 100%;
+  height: 52px;
+  border: 1px solid #dddfe2;
+  color: #1d2129;
+  margin-bottom: 12px;
+}
+
+.li_Inp::placeholder {
+  color: #90949c;
+}
+
+.li_Inp:focus::placeholder {
+  color: #bec3ca;
+}
+
+.li_liBtn {
+  background-color: #1877f2;
+  border: none;
+  border-radius: 6px;
+  font-size: 20px;
+  line-height: 48px;
+  padding: 0 16px;
+  width: 100%;
+  color: white;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.li_formLinks {
+  display: flex;
+  justify-content: center;
+  gap: 10.31px;
+  padding: 12px 0 18px;
+}
+
+.li_formLinks a {
+  color: #1877f2;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.li_formLinks a:visited {
+  color: #1877f2;
+  text-decoration: none;
+}
+
+.li_formLinks a:hover {
+  text-decoration: underline;
+}
+
+.li_passVisBtn {
+  top: 12px;
+}
+
+.hidden {
+  display: none;
+}

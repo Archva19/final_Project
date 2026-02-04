@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- desktop part -->
+    <div id="sp">
+      <!-- desktop main -->
+      <div class="sp_mainContent">
+        <div class="sp_left">
+          <div class="sp_logoBox">
+            <img
+              class="sp_logo"
+              src="https://static.xx.fbcdn.net/rsrc.php/y1/r/4lCu2zih0ca.svg"
+              alt=""
+            />
+          </div>
+          <h2 class="sp_quote">
+            Connect with friends and the world <br />around you on Facebook.
+          </h2>
+        </div>
+        <div class="sp_right">
+          <div class="sp_form">
+            <div class="sp_inputBox">
+              <input
+                class="sp_mailInp sp_input"
+                placeholder="Email or phone number"
+              />
+            </div>
+            <div class="sp_inputBox sp_passInpBox">
+              <input
+                class="sp_passInp sp_input"
+                type="password"
+                placeholder="Password"
+              />
+              <button class="sp_passVisBtn sp_passHideBtn hidden">
+                <img
+                  class="sp_passVisIcon"
+                  src="https://z-m-static.xx.fbcdn.net/rsrc.php/v4/yL/r/b6nQl1NPLRq.png"
+                  alt=""
+                />
+              </button>
+              <button class="sp_passVisBtn sp_passShowBtn hidden">
+                <img
+                  class="sp_passVisIcon"
+                  src="https://z-m-static.xx.fbcdn.net/rsrc.php/v4/yq/r/iHk6KioQuJP.png"
+                  alt=""
+                />
+              </button>
+            </div>
+            <div class="sp_logInBtnBox">
+              <button class="sp_logInBtn sp_scaleBtn">Log in</button>
+            </div>
+            <div class="sp_forgotPassBtnBox">
+              <a class="sp_forgotPassBtn">Forgot password?</a>
+            </div>
+            <div class="sp_decoLine1"></div>
+            <div class="sp_newAccBtnBox">
+              <a
+                href="su_page.html"
+                class="sp_newAccBtn sp_scaleBtn"
+                role="button"
+                >Create new account</a
+              >
+            </div>
+          </div>
+          <div>
+            <p class="sp_pageCreateBtn">
+              <a class="sp_pageCreateBtnLink">Create a Page</a>
+              for a celebrity, brand or business
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- desktop footer for languages and links -->
+      <div class="sp_footer">
+        <div class="sp_languages">
+          <p class="sp_langChosen">English (US)</p>
+          <button class="sp_language sp_langGeo">ქართული</button>
+        </div>
+        <div class="sp_decoLine2"></div>
+        <div class="sp_links">
+          <a href="su_page.html">Sign Up</a>
+          <a href="li_page.html">Log in</a>
+        </div>
+        <p class="sp_copyright">Meta © 2026</p>
+      </div>
+
+      <!-- desktop when adding new account is clicked -->
+
+      <div class="sp_accAddWind hidden">
+        <div class="sp_accAddForm">
+          <p class="sp_accAddTxt">Log Into Facebook</p>
+          <div class="sp_accAddDecoLine"></div>
+          <div class="sp_inputBox">
+            <input
+              class="sp_mailInp sp_input"
+              placeholder="Email or phone number"
+            />
+          </div>
+          <div class="sp_inputBox sp_passInpBox">
+            <input
+              class="sp_passInp sp_input"
+              type="password"
+              placeholder="Password"
+            />
+            <button class="sp_passVisBtn sp_passHideBtn hidden">
+              <img
+                class="sp_passVisIcon"
+                src="https://z-m-static.xx.fbcdn.net/rsrc.php/v4/yL/r/b6nQl1NPLRq.png"
+                alt=""
+              />
+            </button>
+            <button class="sp_passVisBtn sp_passShowBtn hidden">
+              <img
+                class="sp_passVisIcon"
+                src="https://z-m-static.xx.fbcdn.net/rsrc.php/v4/yq/r/iHk6KioQuJP.png"
+                alt=""
+              />
+            </button>
+          </div>
+          <div class="sp_passRememBox">
+            <input class="sp_passRememBtn" id="passRemem" type="checkbox" />
+            <label class="sp_passRememTxt" for="passRemem"
+              >Remember password</label
+            >
+          </div>
+          <div class="sp_logInBtnBox sp_addAccLogInBtnBox">
+            <button class="sp_logInBtn sp_addAccLogInBtn sp_scaleBtn">
+              Log in
+            </button>
+          </div>
+          <div class="sp_forgotPassBtnBox sp_accAddforgPassBtnBox">
+            <a class="sp_forgotPassBtn sp_accAddforgPassBtn"
+              >Forgot password?</a
+            >
+          </div>
+          <button class="sp_accAddWindClBtn">
+            <div class="sp_accAddWindClIcon"></div>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- mobile responsive-->
+
+    <div id="sp_mobileEng" class="sp_mobile">
+      <button class="sp_mobileLanguageBtn">English (US)</button>
+      <div class="sp_mobileLogoBox">
+        <img
+          class="sp_mobileLogo"
+          src="https://z-m-static.xx.fbcdn.net/rsrc.php/v4/yD/r/5D8s-GsHJlJ.png"
+          alt=""
+        />
+      </div>
+      <div class="sp_mobHideWhenLogged">
+        <div class="sp_mobile_emailInpBox sp_mobile_inpBox">
+          <input
+            class="sp_mobile_emailInp sp_mobileInp"
+            placeholder="Mobile number or email"
+            id="sp_mobile_email"
+          />
+          <label
+            for="sp_mobile_email"
+            class="sp_mobile_inpAddPh sp_mobile_emailInpAddPh"
+            >Mobile number or email</label
+          >
+          <button class="sp_mobile_inpDeleteBtn hidden">
+            <img
+              class="sp_mobile_inpDeleteBtnImg"
+              src="icons/inpDelete.png"
+              alt=""
+            />
+          </button>
+        </div>
+        <div class="sp_mobile_passInpBox sp_mobile_inpBox">
+          <input
+            class="sp_mobile_passInp sp_mobileInp"
+            type="password"
+            placeholder="Password"
+            id="sp_mobile_pass"
+          />
+          <label
+            for="sp_mobile_pass"
+            class="sp_mobile_inpAddPh sp_mobile_passInpAddPh"
+            >Password</label
+          >
+          <button
+            class="sp_passVisBtnMob sp_passVisBtn sp_mobile_passHideBtn hidden"
+          >
+            <img
+              class="sp_passVisIconMob sp_passVisIcon"
+              src="https://z-m-static.xx.fbcdn.net/rsrc.php/v4/yL/r/b6nQl1NPLRq.png"
+              alt=""
+            />
+          </button>
+          <button
+            class="sp_passVisBtnMob sp_passVisBtn sp_mobile_passShowBtn hidden"
+          >
+            <img
+              class="sp_passVisIconMob sp_passVisIcon"
+              src="https://z-m-static.xx.fbcdn.net/rsrc.php/v4/yq/r/iHk6KioQuJP.png"
+              alt=""
+            />
+          </button>
+        </div>
+        <button class="sp_mobileLogInBtn">Log in</button>
+        <a class="sp_mobile_forgPass">Forgot Password?</a>
+      </div>
+      <div class="sp_mobShowWhenLogged hidden"></div>
+      <div class="sp_mobileEnd">
+        <button class="sp_mobileCrNewAccBtn sp_mobileBtn">
+          Create new account
+        </button>
+        <img
+          class="sp_mobileMetaLogo"
+          src="https://z-m-static.xx.fbcdn.net/rsrc.php/v4/yK/r/soeuNpXL37G.png"
+          alt=""
+        />
+        <div class="sp_mobileLinks">
+          <a>About</a>
+          <a>Help</a>
+          <a>More</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="mob_actUserLogInWind hidden">
+      <button class="mob_actUserLogInWindBackArrBtn">
+        <img
+          class="mob_actUserLogInWindBackArrIcon"
+          src="https://static.xx.fbcdn.net/rsrc.php/yj/r/U9_Yz2fR4ez.webp"
+          alt=""
+        />
+      </button>
+      <img class="mob_actUserLogInWindProfPict" src="" alt="" />
+      <p class="mob_actUserLogInWindName">First Last</p>
+      <div class="sp_mobile_passInpBox sp_mobile_inpBox">
+        <input
+          class="mob_actUserLogInWindPassInp sp_mobileInp"
+          type="password"
+          placeholder="Password"
+          id="mob_actUserLogInWindPass"
+        />
+        <label
+          for="mob_actUserLogInWindPass"
+          class="sp_mobile_inpAddPh mob_actUserLogInWindPassInpAddPh"
+          >Password</label
+        >
+        <button
+          class="sp_passVisBtnMob sp_passVisBtn mob_actUserLogInWindPassHideBtn hidden"
+        >
+          <img
+            class="sp_passVisIconMob sp_passVisIcon"
+            src="https://z-m-static.xx.fbcdn.net/rsrc.php/v4/yL/r/b6nQl1NPLRq.png"
+            alt=""
+          />
+        </button>
+        <button
+          class="sp_passVisBtnMob sp_passVisBtn mob_actUserLogInWindPassShowBtn hidden"
+        >
+          <img
+            class="sp_passVisIconMob sp_passVisIcon"
+            src="https://z-m-static.xx.fbcdn.net/rsrc.php/v4/yq/r/iHk6KioQuJP.png"
+            alt=""
+          />
+        </button>
+      </div>
+      <button class="mob_actUserLogInWindLogInBtn">Log In</button>
+      <a class="mob_actUserLogInWindForgPassBtn">Forgot password?</a>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>

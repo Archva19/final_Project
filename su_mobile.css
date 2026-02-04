@@ -1,0 +1,401 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, Helvetica, sans-serif;
+}
+
+a,
+button {
+  cursor: pointer;
+}
+
+.su_mobContainer {
+  position: relative;
+  padding: 30px 18px;
+  display: flex;
+  flex-direction: column;
+}
+
+.su_mobBackArrBtn {
+  border: none;
+  background-color: transparent;
+  width: 24px;
+}
+
+.su_mobBackArr {
+  width: 24px;
+  height: 24px;
+}
+
+.su_mobTxt1 {
+  display: inline;
+  overflow-wrap: break-word;
+  font-size: 24px;
+  font-weight: 600;
+  color: rgb(10, 19, 23);
+  padding-bottom: 8px;
+  margin-top: 6px;
+}
+
+.su_mobP1Img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.su_mobTxt2 {
+  display: inline;
+  overflow-wrap: break-word;
+  font-size: 15.6px;
+  font-weight: 400;
+  color: rgb(10, 19, 23);
+  padding: 6px 0 10px;
+  margin-bottom: 8px;
+}
+
+.su_mobBtn {
+  width: 100%;
+  border-radius: 22px;
+  height: 44px;
+  font-size: 15.2px;
+  font-weight: 500;
+}
+
+.su_mobBlueBtn {
+  background: rgb(0, 100, 224);
+  border: 0px solid rgb(10, 19, 23);
+  color: rgb(241, 244, 247);
+}
+
+.su_mobTransparentBtn {
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgb(204, 211, 219);
+  color: rgb(10, 19, 23);
+  margin-top: 10px;
+}
+
+.su_mobP1PopUp {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.su_mobP1PopWind {
+  background-color: white;
+  width: 400px;
+  border-radius: 12px;
+  margin: 32px;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif;
+}
+
+.su_mobP1Txts {
+  padding: 32px;
+  text-align: center;
+}
+
+.su_mobP1PopTxt1 {
+  color: rgb(28, 30, 33);
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.su_mobP1PopTxt2 {
+  color: rgb(101, 103, 107);
+  font-size: 14px;
+  margin-top: 12px;
+}
+
+.su_mobP1PopBtn {
+  width: 100%;
+  display: block;
+  border: none;
+  background-color: transparent;
+  border-top: 1px solid rgb(206, 208, 212);
+  font-size: 16px;
+  line-height: 1.5;
+  padding: 12px 10px;
+  color: rgb(0, 100, 224);
+}
+
+.su_mobMainBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+}
+
+.su_mobContainer {
+  margin-bottom: 250px;
+}
+
+.su_mobInputs {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 15px;
+}
+
+.su_mobInpBox {
+  position: relative;
+  height: 63.3px;
+  flex: 1;
+  overflow: hidden;
+}
+
+.su_mobInp {
+  padding: 10px 16px;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgb(221, 226, 232);
+  border-radius: 16px;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.su_mobInp:focus {
+  border-color: rgba(93, 108, 123);
+  outline: none;
+}
+
+.su_mobInp::placeholder {
+  color: rgba(93, 108, 123);
+}
+
+.su_mobInp:focus::placeholder {
+  opacity: 0;
+}
+
+.su_mobInpAddPh {
+  position: absolute;
+  display: inline-block;
+  opacity: 0;
+  top: 11px;
+  left: 17px;
+  font-size: 13.5px;
+  padding-top: 0.625px;
+  padding-bottom: 0.625px;
+  color: rgba(93, 108, 123);
+  text-overflow: ellipsis;
+}
+
+.su_mobInpDeleteBtn {
+  position: absolute;
+  top: 22px;
+  right: 15px;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background-color: transparent;
+}
+
+.su_mobinpDeleteBtnImg {
+  width: 100%;
+  height: 100%;
+}
+
+.su_mobErrIcon {
+  width: 24px;
+  height: 24px;
+  object-fit: cover;
+  position: absolute;
+  top: 20px;
+  right: 15px;
+  filter: drop-shadow(0px 100px 0 rgb(211, 17, 48));
+  transform: translateY(-100px);
+}
+
+.su_mobErrMess {
+  font-size: 13.5px;
+  font-weight: 400;
+  color: rgb(211, 17, 48);
+  margin: 0px 0px 10px 0px;
+}
+
+.su_mobFindMyAccBtnBox {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 84px;
+}
+
+.su_mobFindMyAccBtn {
+  border: none;
+  background-color: transparent;
+  font-size: 15.2px;
+  font-weight: 500;
+  color: rgb(0, 100, 224);
+}
+
+.su_mobP3Quest {
+  color: rgb(0, 100, 224);
+  font-size: 15.6px;
+  font-weight: 700;
+}
+
+.su_mobP3DateInpBox {
+  padding: 10px 16px;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgb(221, 226, 232);
+  border-radius: 16px;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.su_mobP3DateLabel {
+  overflow-wrap: break-word;
+  font-size: 13.5px;
+  font-weight: 400;
+  color: rgb(93, 108, 123);
+}
+
+.su_mobP3DateInp {
+  background: transparent;
+  color: rgb(10, 19, 23);
+  font-size: 15.2px;
+  line-height: 1.3;
+  caret-color: rgba(0, 0, 0, 0);
+  border: none;
+  display: flex;
+}
+
+.su_mobP3ErrMess {
+  margin-top: 0;
+}
+
+.su_mobP4Container {
+  padding-inline: 0;
+}
+
+.su_mobGendLabel{
+  width: 100%;
+  padding: 15px 20px;
+}
+
+.su_mobGendRadio{
+  margin-right: 20px;
+}
+
+.su_mobP4ErrMess {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100vw;
+  border-top: 1px solid rgb(221, 226, 232);
+  border-bottom: 1px solid rgb(221, 226, 232);
+}
+
+.su_mobP4ErrMessIcon {
+  width: 24px;
+  height: 24px;
+}
+
+.su_mobP4Inputs {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgb(221, 226, 232);
+  border-radius: 16px;
+}
+
+.su_mobGenInpItem {
+  width: 100%;
+  /* padding: 15px 20px; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.su_mobGenInpItem1 {
+  border-bottom: 1px solid rgb(221, 226, 232);
+}
+
+.su_mobP5MobInp,
+.su_mobPassInp, 
+.su_mobP6EmailInp {
+  height: 63.3px;
+  margin-bottom: 15px;
+}
+
+.su_mobTxt3 {
+  font-size: 13.5px;
+  font-weight: 400;
+  letter-spacing: 0px;
+  color: rgb(93, 108, 123);
+  margin: 10px 0 17px 0;
+}
+
+.su_mobTxt3Link {
+  font-weight: 700;
+  color: rgb(0, 100, 224);
+  text-decoration: none;
+}
+
+.su_mobPassVisBtn {
+  height: 24px;
+  width: 24px;
+  position: absolute;
+  top: 19px;
+  right: 17px;
+  border: none;
+  background-color: transparent;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.su_mobPassVisBtn:hover {
+  background-color: #f2f2f2;
+}
+
+.su_mobPassVisIcon {
+  height: 100%;
+  width: 100%;
+  filter: drop-shadow(0px 100px 0 #5d6c7b);
+  transform: translateY(-100px);
+}
+
+.errFontColor {
+  color: rgb(211, 17, 48);
+}
+
+.errBorderCol {
+  border-color: rgb(211, 17, 48);
+}
+
+.errBorderCol:focus {
+  border-color: rgb(211, 17, 48);
+  outline: none;
+}
+
+.errPhColor::placeholder {
+  color: rgb(211, 17, 48);
+}
+
+.hidden {
+  display: none;
+}

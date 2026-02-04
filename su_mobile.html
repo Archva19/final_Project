@@ -1,0 +1,427 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="su_mobile.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="su_mobP1Container su_mobContainer">
+      <button class="su_mobP1BackArrBtn su_mobBackArrBtn">
+        <img
+          class="su_mobBackArr"
+          src="https://static.xx.fbcdn.net/rsrc.php/yA/r/Ji97BE2qpzs.webp"
+          alt=""
+        />
+      </button>
+      <p class="su_mobTxt1">Join Facebook</p>
+      <img
+        class="su_mobP1Img"
+        src="https://static.xx.fbcdn.net/rsrc.php/yU/r/2o9sBpEzJM8.webp"
+        alt=""
+      />
+      <p class="su_mobTxt2">
+        Create an account to connect with friends, family and communities of
+        people who share your interests.
+      </p>
+      <button class="su_mobP1CrAccBtn su_mobBtn su_mobBlueBtn">
+        Create new account
+      </button>
+      <button class="su_mobP1FindMyAccBtn su_mobBtn su_mobTransparentBtn">
+        Find my account
+      </button>
+
+      <div class="su_mobP1PopUp hidden">
+        <div class="su_mobP1PopWind">
+          <div class="su_mobP1Txts">
+            <p class="su_mobP1PopTxt1">
+              Do you want to stop creating your account?
+            </p>
+            <p class="su_mobP1PopTxt2">
+              If you stop now, you'll lose any progress you've made
+            </p>
+          </div>
+          <button class="su_mobP1PopStopBtn su_mobP1PopBtn">
+            Stop creating account
+          </button>
+          <button class="su_mobP1PopContBtn su_mobP1PopBtn">
+            Continue creating account
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="su_mobP2MainBox su_mobMainBox hidden">
+      <div class="su_mobP2Container su_mobContainer">
+        <button class="su_mobP2BackArrBtn su_mobBackArrBtn">
+          <img
+            class="su_mobBackArr"
+            src="https://static.xx.fbcdn.net/rsrc.php/yA/r/Ji97BE2qpzs.webp"
+            alt=""
+          />
+        </button>
+        <p class="su_mobTxt1">What's your name?</p>
+        <p class="su_mobTxt2">Enter the name you use in real life.</p>
+        <div class="su_mobInputs">
+          <div class="su_mobP2InpBox su_mobInpBox">
+            <input
+              class="su_mobP2FnInp su_mobP2Inp su_mobInp"
+              type="text"
+              placeholder="First name"
+            />
+            <label class="su_mobP2inpAddPh su_mobP2inpAddPhFirst su_mobInpAddPh"
+              >First name</label
+            >
+            <button class="su_mobP2inpDeleteBtn su_mobInpDeleteBtn hidden">
+              <img
+                class="su_mobinpDeleteBtnImg"
+                src="icons/inpDelete.png"
+                alt=""
+              />
+            </button>
+            <img
+              class="su_mobErrIcon su_mobP2ErrIconFirst hidden"
+              src="https://static.xx.fbcdn.net/rsrc.php/yX/r/HgF2y8hFPTZ.webp"
+              alt=""
+            />
+          </div>
+          <div class="su_mobP2InpBox su_mobInpBox">
+            <input
+              class="su_mobP2LnInp su_mobP2Inp su_mobInp"
+              type="text"
+              placeholder="Last name"
+            />
+            <label class="su_mobP2inpAddPh su_mobP2inpAddPhLast su_mobInpAddPh"
+              >Last name</label
+            >
+            <button class="su_mobP2inpDeleteBtn su_mobInpDeleteBtn hidden">
+              <img
+                class="su_mobinpDeleteBtnImg"
+                src="icons/inpDelete.png"
+                alt=""
+              />
+            </button>
+            <img
+              class="su_mobErrIcon su_mobP2ErrIconLast hidden"
+              src="https://static.xx.fbcdn.net/rsrc.php/yX/r/HgF2y8hFPTZ.webp"
+              alt=""
+            />
+          </div>
+        </div>
+        <p class="su_mobErrMess su_mobP2ErrMessBoth hidden">
+          Please enter your first and last name.
+        </p>
+        <p class="su_mobErrMess su_mobP2ErrMessFirst hidden">
+          First name cannot be empty.
+        </p>
+        <p class="su_mobErrMess su_mobP2ErrMessLast hidden">
+          Last name cannot be empty.
+        </p>
+        <button class="su_mobP2NextBtn su_mobBtn su_mobBlueBtn">Next</button>
+      </div>
+      <div class="su_mobFindMyAccBtnBox">
+        <button class="su_mobFindMyAccBtn">Find my account</button>
+      </div>
+    </div>
+
+    <div class="su_mobMainBox su_mobP3MainBox hidden">
+      <div class="su_mobContainer su_mobP2Container">
+        <button class="su_mobP3BackArrBtn su_mobBackArrBtn">
+          <img
+            class="su_mobBackArr"
+            src="https://static.xx.fbcdn.net/rsrc.php/yA/r/Ji97BE2qpzs.webp"
+            alt=""
+          />
+        </button>
+        <p class="su_mobTxt1">What's your birthday?</p>
+        <p class="su_mobTxt2">
+          Choose your date of birth. You can always make this private later.
+          <a class="su_mobP3Quest">Why do I need to provide my birthday?</a>
+        </p>
+        <div class="su_mobP3DateInpBox">
+          <label class="su_mobP3DateLabel"
+            >Birthday (<span class="su_mobP3DateInpAgeTxt">0</span> years
+            old)</label
+          >
+          <input
+            class="su_mobP3DateInp"
+            type="date"
+            min="1876-02-03"
+            max="2027-02-03"
+          />
+        </div>
+        <p class="su_mobP3ErrMess su_mobErrMess hidden">
+          It looks like you entered the wrong info. Please be sure to use your
+          real birthday
+        </p>
+        <button class="su_mobP3NextBtn su_mobBtn su_mobBlueBtn">Next</button>
+      </div>
+      <div class="su_mobFindMyAccBtnBox">
+        <button class="su_mobFindMyAccBtn">Find my account</button>
+      </div>
+    </div>
+
+    <div class="su_mobP4MainBox su_mobMainBox hidden">
+      <div class="su_mobP4Container su_mobContainer">
+        <button
+          class="su_mobP4BackArrBtn su_mobBackArrBtn"
+          style="padding-inline: 18px"
+        >
+          <img
+            class="su_mobBackArr"
+            src="https://static.xx.fbcdn.net/rsrc.php/yA/r/Ji97BE2qpzs.webp"
+            alt=""
+          />
+        </button>
+        <p class="su_mobTxt1" style="padding-inline: 18px">
+          What's your gender?
+        </p>
+        <p class="su_mobTxt2" style="padding-inline: 18px">
+          You can change who sees your gender on your profile later.
+        </p>
+        <div
+          class="su_mobP4ErrMess hidden"
+          style="padding: 16px 15px; margin-bottom: 15px"
+        >
+          <img
+            class="su_mobP4ErrMessIcon"
+            src="https://static.xx.fbcdn.net/rsrc.php/yX/r/HgF2y8hFPTZ.webp"
+            alt=""
+          />
+          <p>Please choose a gender option.</p>
+        </div>
+        <div style="padding-inline: 18px">
+          <div class="su_mobInputs su_mobP4Inputs">
+            <div class="su_mobGenInpItem su_mobGenInpItem1">
+              <label class="su_mobGendLabel" for="su_mobGendF">Female</label>
+              <input
+                id="su_mobGendF"
+                class="su_mobGendRadio"
+                type="radio"
+                name="gender"
+                value="female"
+              />
+            </div>
+            <div class="su_mobGenInpItem">
+              <label class="su_mobGendLabel" for="su_mobGendM">Male</label>
+              <input
+                id="su_mobGendM"
+                class="su_mobGendRadio"
+                type="radio"
+                name="gender"
+                value="male"
+              />
+            </div>
+          </div>
+        </div>
+        <div style="padding-inline: 18px">
+          <button class="su_mobP4NextBtn su_mobBtn su_mobBlueBtn">Next</button>
+        </div>
+      </div>
+      <div class="su_mobFindMyAccBtnBox">
+        <button class="su_mobFindMyAccBtn">Find my account</button>
+      </div>
+    </div>
+
+    <div class="su_mobP5MainBox su_mobMainBox hidden">
+      <div class="su_mobP5Container su_mobContainer">
+        <button class="su_mobP5BackArrBtn su_mobBackArrBtn">
+          <img
+            class="su_mobBackArr"
+            src="https://static.xx.fbcdn.net/rsrc.php/yA/r/Ji97BE2qpzs.webp"
+            alt=""
+          />
+        </button>
+        <p class="su_mobTxt1">What's your mobile number?</p>
+        <p class="su_mobTxt2">
+          Enter the mobile number where you can be contacted. No one will see
+          this on your profile
+        </p>
+        <div class="su_mobP5InpBox su_mobInpBox">
+          <input
+            class="su_mobP5MobInp su_mobInp"
+            type="text"
+            placeholder="Mobile number"
+          />
+          <label class="su_mobP5inpAddPh su_mobInpAddPh">Mobile number</label>
+          <button class="su_mobP5inpDeleteBtn su_mobInpDeleteBtn hidden">
+            <img
+              class="su_mobinpDeleteBtnImg"
+              src="icons/inpDelete.png"
+              alt=""
+            />
+          </button>
+          <img
+            class="su_mobErrIcon su_mobP5ErrIcon hidden"
+            src="https://static.xx.fbcdn.net/rsrc.php/yX/r/HgF2y8hFPTZ.webp"
+            alt=""
+          />
+        </div>
+        <p class="su_mobErrMess su_mobP5ErrMess1 hidden">
+          Mobile number required
+        </p>
+        <p class="su_mobErrMess su_mobP5ErrMess2 hidden">
+          Looks like your mobile number may be incorrect. Try entering your full
+          number, including the country code
+        </p>
+        <p class="su_mobTxt3">
+          You may receive WhatsApp and SMS notifications from us.
+          <a
+            class="su_mobTxt3Link"
+            href="https://www.facebook.com/help/251747795694485"
+            >Learn more</a
+          >
+        </p>
+        <button class="su_mobP5NextBtn su_mobBtn su_mobBlueBtn">Next</button>
+        <button class="su_mobP5SignUpEmailBtn su_mobBtn su_mobTransparentBtn">
+          Sign up with email
+        </button>
+      </div>
+      <div class="su_mobFindMyAccBtnBox">
+        <button class="su_mobFindMyAccBtn">Find my account</button>
+      </div>
+    </div>
+
+    <div class="su_mobP6MainBox su_mobMainBox hidden">
+      <div class="su_mobP6Container su_mobContainer">
+        <button class="su_mobP6BackArrBtn su_mobBackArrBtn">
+          <img
+            class="su_mobBackArr"
+            src="https://static.xx.fbcdn.net/rsrc.php/yA/r/Ji97BE2qpzs.webp"
+            alt=""
+          />
+        </button>
+        <p class="su_mobTxt1">What's your email?</p>
+        <p class="su_mobTxt2">
+          Enter the email where you can be contacted. No one will see this on
+          your profile.
+        </p>
+        <div class="su_mobP6InpBox su_mobInpBox">
+          <input
+            class="su_mobP6EmailInp su_mobInp"
+            type="text"
+            placeholder="Email"
+          />
+          <label class="su_mobP6inpAddPh su_mobInpAddPh">Email</label>
+          <button class="su_mobP6inpDeleteBtn su_mobInpDeleteBtn hidden">
+            <img
+              class="su_mobinpDeleteBtnImg"
+              src="icons/inpDelete.png"
+              alt=""
+            />
+          </button>
+          <img
+            class="su_mobErrIcon su_mobP6ErrIcon hidden"
+            src="https://static.xx.fbcdn.net/rsrc.php/yX/r/HgF2y8hFPTZ.webp"
+            alt=""
+          />
+        </div>
+        <p class="su_mobErrMess su_mobP6ErrMess1 hidden">Email required</p>
+        <p class="su_mobErrMess su_mobP6ErrMess2 hidden">
+          Enter a valid email address
+        </p>
+        <p class="su_mobTxt3">
+          You'll also receive emails from us and can opt out anytime.
+          <a
+            class="su_mobTxt3Link"
+            href="https://www.facebook.com/help/297947214257999"
+            >Learn more</a
+          >
+        </p>
+        <button class="su_mobP6NextBtn su_mobBtn su_mobBlueBtn">Next</button>
+        <button class="su_mobP6SignUpMobileBtn su_mobBtn su_mobTransparentBtn">
+          Sign up with mobile number
+        </button>
+      </div>
+      <div class="su_mobFindMyAccBtnBox">
+        <button class="su_mobFindMyAccBtn">Find my account</button>
+      </div>
+    </div>
+
+    <div class="su_mobPassWindBox su_mobMainBox hidden">
+      <div class="su_mobPassWindContainer su_mobContainer">
+        <button class="su_mobPassWindBackArrBtn su_mobBackArrBtn">
+          <img
+            class="su_mobBackArr"
+            src="https://static.xx.fbcdn.net/rsrc.php/yA/r/Ji97BE2qpzs.webp"
+            alt=""
+          />
+        </button>
+        <p class="su_mobTxt1">Create Password</p>
+        <p class="su_mobTxt2">
+          Create a password with at least 6 letters or numbers. It should be
+          something others can't guess.
+        </p>
+
+        <div class="su_mobPassInpBox su_mobInpBox">
+          <input
+            class="su_mobPassInp su_mobInp"
+            type="password"
+            placeholder="Password"
+          />
+          <label class="su_mobPassinpAddPh su_mobInpAddPh">Password</label>
+
+          <button class="su_mobPassVisBtn su_mobPassHideBtn hidden">
+            <img
+              class="su_mobPassVisIcon"
+              src="https://z-m-static.xx.fbcdn.net/rsrc.php/v4/yL/r/b6nQl1NPLRq.png"
+              alt=""
+            />
+          </button>
+          <button class="su_mobPassVisBtn su_mobPassShowBtn hidden">
+            <img
+              class="su_mobPassVisIcon"
+              src="https://z-m-static.xx.fbcdn.net/rsrc.php/v4/yq/r/iHk6KioQuJP.png"
+              alt=""
+            />
+          </button>
+          <img
+            class="su_mobErrIcon su_mobPassErrIcon hidden"
+            src="https://static.xx.fbcdn.net/rsrc.php/yX/r/HgF2y8hFPTZ.webp"
+            alt=""
+          />
+        </div>
+        <p class="su_mobErrMess su_mobPassErrMess hidden">
+          This password is too short. Create a longer password with at least 6
+          letters and numbers
+        </p>
+        <button class="su_mobPassNextBtn su_mobBtn su_mobBlueBtn">Next</button>
+      </div>
+      <div class="su_mobFindMyAccBtnBox">
+        <button class="su_mobFindMyAccBtn">Find my account</button>
+      </div>
+    </div>
+
+    <div class="su_mobPassSaveWindBox su_mobMainBox hidden">
+      <div class="su_mobPassSaveContainer su_mobContainer">
+        <button class="su_mobPassSaveBackArrBtn su_mobBackArrBtn">
+          <img
+            class="su_mobBackArr"
+            src="https://static.xx.fbcdn.net/rsrc.php/yA/r/Ji97BE2qpzs.webp"
+            alt=""
+          />
+        </button>
+        <p class="su_mobTxt1">Save your login info?</p>
+        <p class="su_mobTxt2">
+          We'll save the login info for
+          <span class="su_mobTxt2SaveInfoName">First Last</span>, so you won't
+          need to enter it next time you log in.
+        </p>
+        <button class="su_mobSaveInfoWindSaveBtn su_mobBtn su_mobBlueBtn">
+          Save
+        </button>
+        <button
+          class="su_mobSaveInfoWindNotNowBtn su_mobBtn su_mobTransparentBtn"
+        >
+          Not now
+        </button>
+      </div>
+      <div class="su_mobFindMyAccBtnBox">
+        <button class="su_mobFindMyAccBtn">Find my account</button>
+      </div>
+    </div>
+
+  </body>
+  <script src="su_mobile.js"></script>
+</html>
