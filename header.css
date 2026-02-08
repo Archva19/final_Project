@@ -1,0 +1,210 @@
+.mainPageHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 15px;
+  height: 56px;
+  width: 100vw;
+  box-shadow:
+    0 2px 4px #0000001a,
+    0 8px 16px #0000001a;
+  background-color: white;
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.mainPageHeadLeft {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.mainPageHeadLogo {
+  height: 40px;
+  width: 40px;
+}
+
+.mainPageHeadSearchBox {
+  width: 240px;
+  height: 40px;
+  position: relative;
+}
+
+.mainPageHeadSearchIcon {
+  position: absolute;
+  top: 1px;
+  left: 5px;
+  width: 38px;
+  height: 38px;
+}
+
+.mainPageHeadSearchInput {
+  width: 100%;
+  height: 100%;
+  padding-left: 40px;
+  background-color: #f1f2f5;
+  border: none;
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+}
+
+.mainPageHeadCent {
+  display: flex;
+  gap: 4px;
+}
+
+.mainPageHeadCenterBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 130px;
+  height: 50px;
+  border: none;
+  background-color: transparent;
+  border-radius: 15px;
+  position: relative;
+}
+
+.mainPageHeadCenterBtnIcon {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+}
+
+.mainPageHeadCenterBtnActiveDecoLine {
+  height: 3px;
+  border-radius: 20px;
+  width: 100%;
+  border-color: #0966ff;
+  background-color: #0966ff;
+  position: absolute;
+  bottom: -3px;
+}
+
+.mainPageHeadRight {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.mainPageHeadFindFriendsBtn {
+  background-color: #e2e4e8;
+  width: 109px;
+  height: 38px;
+  font-size: 15px;
+  border-radius: 30px;
+  border: none;
+  font-weight: 600;
+}
+
+.mainPageHeadFindFriendsBtn:hover {
+  background-color: #d7d9dd;
+}
+
+.mainPageHeadRightBtn {
+  border: none;
+  border-radius: 50%;
+  background-color: #e2e4e8;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mainPageHeadRightBtnIcon {
+  width: 20px;
+  height: 20px;
+}
+
+.mainPageHeadRightBtn:hover {
+  background-color: #d7d9dd;
+}
+
+.mainPageHeadProfileBtn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  position: relative;
+  border: 0.1px solid rgb(181, 181, 181);
+}
+
+.mainPageHeadUserProfPict {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+}
+
+.mainPageHeadUserProfArrBtnBox {
+  border-radius: 50%;
+  position: absolute;
+  bottom: -3px;
+  right: -3px;
+  background-color: #e2e4e8;
+  border: 2px solid white;
+  width: 17px;
+  height: 17px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.mainPageHeadUserProfArrBtn {
+  width: 9px;
+  height: 9px;
+}
+
+@media (max-width: 1379px) {
+  .mainPageHeadCenterBtn {
+    max-width: 111.6px;
+  }
+}
+
+@media (max-width: 1260px) {
+  .mainPageHeadFindFriendsBtn {
+    display: none;
+  }
+}
+
+@media (max-width: 1259px) {
+  .mainPageHeadSearchBox {
+    width: 40px;
+  }
+
+  .mainPageHeadSearchIcon {
+    position: absolute;
+    top: 1px;
+    left: 2px;
+    width: 38px;
+    height: 38px;
+  }
+
+  .mainPageHeadSearchInput {
+    border-radius: 50%;
+  }
+
+  .mainPageHeadSearchInput::placeholder {
+    display: none;
+  }
+}
+
+@media (max-width: 1099px) {
+  .mainPageHeadCenterBtn {
+    max-width: calc(15vw - 55px);
+  }
+}
+
+@media (max-width: 700px) {
+  .mainPageHeadCenterBtn {
+    display: none;
+  }
+}
+
+.hidden{
+    display: none;
+}

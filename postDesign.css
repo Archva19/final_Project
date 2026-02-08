@@ -1,0 +1,332 @@
+.mainPagePostItem {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  margin-bottom: 12px;
+  position: relative;
+  overflow: hidden;
+}
+
+.mainPagePostTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 15px 7px 15px;
+}
+
+.postTopLeft {
+  display: flex;
+  gap: 10px;
+}
+
+.postProfImg {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.postTopCenter {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.postTopCenterTop {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.postPageName {
+  font-size: 15px;
+  font-weight: 600;
+  color: #080809;
+}
+
+.postFollowBtn {
+  font-size: 15px;
+  color: #0064d1;
+  border: none;
+  background-color: transparent;
+}
+
+.postTopCenterBottom {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 400;
+  color: #65686c;
+}
+
+.postAudienceIcon {
+  width: 23px;
+  height: 23px;
+}
+
+.postTopBtns {
+  display: flex;
+  gap: 5px;
+}
+
+.postTopBtn {
+  width: 36px;
+  height: 36px;
+  border: none;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.postTopBtnIcon {
+  width: 17px;
+  height: 17px;
+  filter: drop-shadow(0px 100px 0 #65686c);
+  transform: translateY(-100px);
+}
+
+.postTxtContent {
+  padding: 0 0 10px 15px;
+  font-size: 15px;
+  color: #080809;
+}
+
+.postImgContentBox {
+  margin-bottom: 15px;
+}
+
+.postImgContent {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.postLikesCommentsShares {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 5px;
+  padding-inline: 15px;
+}
+
+.postLikes {
+  display: flex;
+  align-items: center;
+}
+
+.postReactionIcons {
+  display: flex;
+  align-items: center;
+  gap: -4px;
+}
+
+.postReactionIcon {
+  width: 18px;
+  width: 18px;
+  cursor: pointer;
+}
+
+.postLikesNum {
+  padding-inline: 4px;
+  line-height: 1.3px;
+  font-size: 15px;
+  color: #65686c;
+  cursor: pointer;
+}
+
+.postLikesNum:hover {
+  text-decoration: underline;
+}
+
+.commentsAndShares {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: #65686c;
+}
+
+.postBtns {
+  display: flex;
+  align-items: center;
+  padding: 5px 15px;
+}
+
+.postBtn {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  border: none;
+  background-color: transparent;
+  overflow: hidden;
+  height: 35px;
+  border-radius: 6px;
+  color: #65686c;
+}
+
+.postBtnIcon {
+  background-image: url(icons/iconsCompilation4.webp);
+  filter: drop-shadow(0px 100px 0 #65686c);
+  transform: translateY(-100px);
+  background-size: 25px 1181px;
+  width: 20px;
+  height: 20px;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+
+.postLikeIcon {
+  background-position: 0px -697px;
+}
+
+.postCommentIcon {
+  background-position: 0 -487px;
+}
+
+.postShareIcon {
+  background-position: 0px -844px;
+}
+
+.postMoreBtnsWindow {
+  filter: drop-shadow(0 0px 6px rgba(0, 0, 0, 0.2));
+  position: absolute;
+  top: 68px;
+  right: 70px;
+  width: 344px;
+  height: 445px;
+  background-color: white;
+  border-radius: 10px 0 10px 10px;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.postMoreBtnsWindow::before {
+  content: "";
+  top: 52px;
+  right: -79px;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-size: 30px;
+  background-image: url("icons/arrow_drop_down.png");
+  transform: rotate(315deg) translateY(-300px);
+  filter: drop-shadow(0px 200px 0px #ffffff);
+}
+
+.postMoreBtn {
+  width: 100%;
+  display: flex;
+  padding: 6.5px 8px;
+  align-items: center;
+  gap: 10px;
+  border: none;
+  background-color: transparent;
+  border-radius: 5px;
+}
+
+.postMoreBtn:hover {
+  background-color: #f2f2f2;
+}
+
+.postMoreBtnIcon {
+  width: 20px;
+  height: 20px;
+  background-repeat: no-repeat;
+}
+
+.marginTop-10px{
+  margin-top: -10px;
+}
+
+.interestedBtnIcon {
+  background-image: url(icons/iconCompilation5.png);
+  background-position: 0px -256px;
+  background-size: 25px 545px;
+}
+
+.notInterestedBtnIcon {
+  background-image: url(icons/iconCompilation7.png);
+  background-position: 0px -130px;
+  background-size: 25px 185px;
+}
+
+.savePostBtnIcon {
+  background-image: url(icons/IconCompilation6.png);
+  background-position: 0px -88px;
+  background-size: 25px 778px;
+}
+
+.notificationsBtnIcon {
+  background-image: url(icons/iconCompilation8.png);
+  background-position: 0px -126px;
+  background-size: 21px 336px;
+}
+
+.whySeeingBtnIcon {
+  background-image: url(icons/iconCompilation9.png);
+  background-position: 0px -657px;
+  background-size: 33px 996px;
+}
+
+.embedBtnIcon {
+  background-image: url(icons/iconCompilation8.png);
+  background-position: 0px -210px;
+  background-size: 21px 336px;
+}
+
+.postMoreBtnBoxTxts {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.postMoreBtnBoxTxt1 {
+  font-size: 15px;
+  line-height: 20px;
+  color: #080809;
+  font-weight: 500;
+  display: flex;
+}
+
+.postMoreBtnBoxTxt2 {
+  font-size: 12px;
+  line-height: 17px;
+  font-weight: 400;
+  color: #65686c;
+}
+
+.postMoreBtnsDecoLine {
+  width: 100%;
+  height: 1px;
+  border-bottom: 1px solid #d0d3d7;
+  margin: 5px 0;
+}
+
+@media (max-width: 600px) {
+  .postMoreBtnsWindow {
+    border-radius: 10px;
+    right: 1.5vw;
+    top: 50px;
+    margin: 0 auto;
+    width: 97vw;
+  }
+
+  .postMoreBtnsWindow::before {
+    display: none;
+  }
+}
+
+.hidden{
+  display: none !important;
+}
