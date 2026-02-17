@@ -155,6 +155,7 @@ function createPost(mainContainer, postsContainer, page, post, postType) {
   mainPagePostTop.appendChild(postTopBtns);
 
   const postMoreBtnsBtn = document.createElement("button");
+  postMoreBtnsBtn.tabIndex = 0;
   postMoreBtnsBtn.classList.add("postMoreBtnsBtn");
   postMoreBtnsBtn.classList.add("postTopBtn");
   postMoreBtnsBtn.classList.add("hoverLightGrayBtn");
@@ -256,9 +257,9 @@ function createPost(mainContainer, postsContainer, page, post, postType) {
   postLikeBtn.classList.add("hoverLightGrayBtn");
   postBtns.appendChild(postLikeBtn);
 
-  const postLikeInterractIcon = document.createElement("div");
-  postLikeInterractIcon.classList.add("postLikeIcon");
+  const postLikeInterractIcon = document.createElement("img");
   postLikeInterractIcon.classList.add("postBtnIcon");
+  postLikeInterractIcon.src = "icons/likeIcon.png"
   postLikeBtn.appendChild(postLikeInterractIcon);
 
   const postLikeTxt = document.createElement("p");
@@ -272,9 +273,9 @@ function createPost(mainContainer, postsContainer, page, post, postType) {
   postCommentBtn.classList.add("hoverLightGrayBtn");
   postBtns.appendChild(postCommentBtn);
 
-  const postCommentIcon = document.createElement("div");
-  postCommentIcon.classList.add("postCommentIcon");
+  const postCommentIcon = document.createElement("img");
   postCommentIcon.classList.add("postBtnIcon");
+  postCommentIcon.src = "icons/commentIcon.png"
   postCommentBtn.appendChild(postCommentIcon);
 
   const postCommentTxt = document.createElement("p");
@@ -289,9 +290,9 @@ function createPost(mainContainer, postsContainer, page, post, postType) {
   postShareBtn.classList.add("hoverLightGrayBtn");
   postBtns.appendChild(postShareBtn);
 
-  const postShareIcon = document.createElement("div");
-  postShareIcon.classList.add("postShareIcon");
+  const postShareIcon = document.createElement("img");
   postShareIcon.classList.add("postBtnIcon");
+  postShareIcon.src = "icons/shareIcon.png"
   postShareBtn.appendChild(postShareIcon);
 
   const postShareTxt = document.createElement("p");
@@ -1616,6 +1617,7 @@ function createPost(mainContainer, postsContainer, page, post, postType) {
   comBoxMainPagePostTop.appendChild(comBoxPostTopBtns);
 
   const comBoxPostMoreBtnsBtn = document.createElement("button");
+  comBoxPostMoreBtnsBtn.tabIndex = 0;
   comBoxPostMoreBtnsBtn.classList.add("postMoreBtnsBtn");
   comBoxPostMoreBtnsBtn.classList.add("postTopBtn");
   comBoxPostMoreBtnsBtn.classList.add("hoverLightGrayBtn");
@@ -1697,9 +1699,9 @@ function createPost(mainContainer, postsContainer, page, post, postType) {
   comBoxPostLikeBtn.classList.add("hoverLightGrayBtn");
   comBoxPostBtns.appendChild(comBoxPostLikeBtn);
 
-  const comBoxPostLikeInterractIcon = document.createElement("div");
-  comBoxPostLikeInterractIcon.classList.add("postLikeIcon");
+  const comBoxPostLikeInterractIcon = document.createElement("img");
   comBoxPostLikeInterractIcon.classList.add("postBtnIcon");
+  comBoxPostLikeInterractIcon.src = "icons/likeIcon.png"
   comBoxPostLikeBtn.appendChild(comBoxPostLikeInterractIcon);
 
   const comBoxPostLikeTxt = document.createElement("p");
@@ -1713,9 +1715,9 @@ function createPost(mainContainer, postsContainer, page, post, postType) {
   comBoxPostCommentBtn.classList.add("hoverLightGrayBtn");
   comBoxPostBtns.appendChild(comBoxPostCommentBtn);
 
-  const comBoxPostCommentIcon = document.createElement("div");
-  comBoxPostCommentIcon.classList.add("postCommentIcon");
+  const comBoxPostCommentIcon = document.createElement("img");
   comBoxPostCommentIcon.classList.add("postBtnIcon");
+  comBoxPostCommentIcon.src = "icons/commentIcon.png"
   comBoxPostCommentBtn.appendChild(comBoxPostCommentIcon);
 
   const comBoxPostCommentTxt = document.createElement("p");
@@ -1730,9 +1732,9 @@ function createPost(mainContainer, postsContainer, page, post, postType) {
   comBoxPostShareBtn.classList.add("hoverLightGrayBtn");
   comBoxPostBtns.appendChild(comBoxPostShareBtn);
 
-  const comBoxPostShareIcon = document.createElement("div");
-  comBoxPostShareIcon.classList.add("postShareIcon");
+  const comBoxPostShareIcon = document.createElement("img");
   comBoxPostShareIcon.classList.add("postBtnIcon");
+  comBoxPostShareIcon.src = "icons/shareIcon.png"
   comBoxPostShareBtn.appendChild(comBoxPostShareIcon);
 
   const comBoxPostShareTxt = document.createElement("p");
@@ -1932,6 +1934,6 @@ function createPost(mainContainer, postsContainer, page, post, postType) {
     activeUserCommentInput.value = "";
     commentBtn.disabled = true;
     commentIcon.classList.remove("commentActiveIcon");
-    commentsBox.style.paddingBottom = "80px";
+    commentsBox.style.paddingBottom = "90px";
   });
 }

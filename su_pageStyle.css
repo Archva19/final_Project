@@ -94,7 +94,7 @@ button {
   font-size: 15px;
   line-height: 16px;
   border-radius: 5px;
-  border: solid #ccd0d5;
+  border: 1px solid #ccd0d5;
   outline: none;
 }
 
@@ -180,7 +180,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border: solid #ccd0d5;
+  border: 1px solid #ccd0d5;
   height: 36px;
   border-radius: 4px;
   width: 194px;
@@ -207,7 +207,7 @@ button {
   padding: 11px;
   height: 40px;
   width: 100%;
-  border: solid #ccd0d5;
+  border: 1px solid #ccd0d5;
   border-radius: 5px;
   margin-bottom: 10px;
   font-size: 15px;
@@ -457,7 +457,7 @@ button {
 }
 
 .inpErr {
-  border: solid #fe0100;
+  border: 1px solid #fe0100;
 }
 
 .hidden {
