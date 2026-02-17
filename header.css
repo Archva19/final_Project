@@ -9,7 +9,7 @@
     0 2px 4px #0000001a,
     0 8px 16px #0000001a;
   background-color: white;
-  z-index: 1;
+  z-index: 999;
   position: fixed;
   top: 0;
   width: 100%;
@@ -137,6 +137,7 @@
   height: 100%;
   width: 100%;
   border-radius: 50%;
+  object-fit: cover;
 }
 
 .mainPageHeadUserProfArrBtnBox {
@@ -157,6 +158,194 @@
 .mainPageHeadUserProfArrBtn {
   width: 9px;
   height: 9px;
+}
+
+.headerProfileClickWindow {
+  position: absolute;
+  right: 18px;
+  top: 52px;
+  border-radius: 12px;
+  background-color: white;
+  box-shadow:
+    0 12px 28px 0 rgba(0, 0, 0, 0.2),
+    0 2px 4px 0 rgba(0, 0, 0, 0.1);
+  width: 360px;
+  padding: 8px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.logOutWindowProfiles {
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+  width: 97%;
+  padding: 4px 4px 10px 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.logOutWindowProfileBtn {
+  background-color: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 10px;
+  padding: 15px 8px;
+  border-radius: 8px;
+}
+
+.logOutWindowActiveUserName {
+  font-size: 17px;
+  font-weight: 600;
+  color: #080809;
+}
+
+.logOutWindowActiveUserProf {
+  width: 36px;
+  height: 36px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.logOutWindowDecoLine {
+  height: 1px;
+  width: 95%;
+  border-bottom: 1px solid #d0d3d7;
+  margin: 4px 0 15px 0;
+}
+
+.logOutWindowSeeAllProfilesBtn {
+  width: 95%;
+  height: 36px;
+  background-color: #e2e5e9;
+  border: none;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+}
+
+.logOutWindowSeeAllProfilesIcon {
+  background-image: url(icons/iconCompilation11.png);
+  background-position: 0px -256px;
+  background-size: 25px 273px;
+  width: 16px;
+  height: 16px;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+
+.logOutWindowSeeAllProfilesTxt {
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 20px;
+  color: #080809;
+}
+
+.logOutWindowBtn {
+  width: 100%;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: none;
+  background-color: transparent;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.logOutWindowBtnLeft {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logOutBtnIconBox {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #e2e5e9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logOutBtnIcon {
+  width: 20px;
+  height: 20px;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+
+.settingsIcon {
+  background-image: url(icons/iconCompilation17.png);
+  background-position: -21px -348px;
+  background-size: 73px 450px;
+}
+
+.helpIcon {
+  background-image: url(icons/iconCompilation11.png);
+  background-position: 0px -193px;
+  background-size: 25px 273px;
+}
+
+.displayIcon {
+  background-image: url(icons/iconCompilation18.png);
+  background-position: 0px -21px;
+  background-size: 21px 190px;
+}
+
+.feedbackIcon {
+  background-image: url(icons/iconCompilation19.png);
+  background-position: 0px -134px;
+  background-size: 25px 459px;
+}
+
+.logOutIcon {
+  background-image: url(icons/iconCompilation19.png);
+  background-position: 0px -176px;
+  background-size: 25px 459px;
+}
+
+.logOutBtnArr{
+      background-image: url(icons/iconCompilation9.png);
+    background-position: 0px -133px;
+    background-size: 33px 996px;
+    width: 24px;
+    height: 24px;
+    background-repeat: no-repeat;
+    display: inline-block;
+}
+
+.logOutBtnTxt {
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: 500;
+  color: #080809;
+}
+
+.headerProfileClickWindow {
+  padding: 15px;
+  overflow: hidden;
+  gap: 10px;
+}
+
+.headerSelectProfileWindowTop {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+.hidden {
+  display: none;
 }
 
 @media (max-width: 1379px) {
@@ -205,6 +394,9 @@
   }
 }
 
-.hidden{
-    display: none;
+@media (max-width: 600px) {
+  .headerProfileClickWindow {
+    width: 97vw;
+    right: 1.5vw;
+  }
 }

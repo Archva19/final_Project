@@ -1,119 +1,75 @@
-const pagesArr = [
-  {
-    id: 1,
-    name: "Art World",
-    profileImg: "images/artWorldProfileImg.jpeg",
-    coverImg: "images/artWorldCoverImg.jpeg",
-    followerNum: "104K",
-    followingNum: "10",
-    bio: "Interested in arts❤✨",
-    postsArr: [
-      {
-        textContent: "Sunflowers in Van Gogh style 🌻",
-        datePublished: "January 2 at 3.43 PM",
-        imgContent: "images/artWorldPost1.jpeg",
-        likesNum: "1.2K",
-        commentsArr: [
-          {
-            authorName: "Jane Black",
-            authorProfImg: "images/commentAuthor1Img.jpeg",
-            commentTxtContent: "Wow 🌻",
-          },
-          {
-            authorName: "Mary James",
-            authorProfImg: "images/commentAuthor1Img.jpeg",
-            commentTxtContent: "I love it 🌻",
-          },
-        ],
-        sharesNum: "289",
-      },
-      {
-        textContent: "Beautiful Painting",
-        datePublished: "January 5 at 12.05 AM",
-        imgContent: "images/artWorldPost2.jpg",
-        likesNum: "2.4K",
-        commentsArr: [
-          {
-            authorName: "Jane Black",
-            authorProfImg: "images/commentAuthor1Img.jpeg",
-            commentTxtContent: "Wow 🌻",
-          },
-          {
-            authorName: "Mary James",
-            authorProfImg: "images/commentAuthor1Img.jpeg",
-            commentTxtContent: "I love it 🌻",
-          },
-        ],
-        sharesNum: "400",
-      },
-      {
-        textContent: "Beautiful Painting",
-        datePublished: "January 6 at 7.54 PM",
-        imgContent: "images/artWorldPost3.jpg",
-        likesNum: "2.4K",
-        commentsArr: [
-          {
-            authorName: "Jane Black",
-            authorProfImg: "images/commentAuthor1Img.jpeg",
-            commentTxtContent: "Wow 🌻",
-          },
-          {
-            authorName: "Mary James",
-            authorProfImg: "images/commentAuthor1Img.jpeg",
-            commentTxtContent: "I love it 🌻",
-          },
-        ],
-        sharesNum: "400",
-      },
-      {
-        textContent: "Beautiful Painting",
-        datePublished: "January 10 at 3.22 PM",
-        imgContent: "images/artWorldPost4.jpg",
-        likesNum: "2.4K",
-        commentsArr: [
-          {
-            authorName: "Jane Black",
-            authorProfImg: "images/commentAuthor1Img.jpeg",
-            commentTxtContent: "Wow 🌻",
-          },
-          {
-            authorName: "Mary James",
-            authorProfImg: "images/commentAuthor1Img.jpeg",
-            commentTxtContent: "I love it 🌻",
-          },
-        ],
-        sharesNum: "400",
-      },
-      {
-        textContent: "Beautiful Painting",
-        datePublished: "January 15 at 5.12 PM",
-        imgContent: "images/artWorldPost5.jpg",
-        likesNum: "2.4K",
-        commentsArr: [
-          {
-            authorName: "Jane Black",
-            authorProfImg: "images/commentAuthor1Img.jpeg",
-            commentTxtContent: "Wow 🌻",
-          },
-          {
-            authorName: "Mary James",
-            authorProfImg: "images/commentAuthor1Img.jpeg",
-            commentTxtContent: "I love it 🌻",
-          },
-        ],
-        sharesNum: "400",
-      },
-    ],
-  },
-];
-
-localStorage.setItem("pagesArr", JSON.stringify(pagesArr));
-
 // აქტიური ფეიჯის მონაცემების გამოტანა
 
-const activePage = JSON.parse(localStorage.getItem("activePage"));
+const pagesArr = JSON.parse(localStorage.getItem("pagesArr"));
+const activePageId = JSON.parse(localStorage.getItem("activePageId"));
 
-const pageProfileWindow = document.querySelector(".pageProfileWindow");
+// დაფოლოვება
+
+function updateUsers() {
+  localStorage.setItem("ActiveUser", JSON.stringify(activeUser));
+
+  let loggedInUsersArr = JSON.parse(localStorage.getItem("loggedInUsers"));
+  let usersArr = JSON.parse(localStorage.getItem("users"));
+
+  for (let i = 0; i < loggedInUsersArr.length; i++) {
+    if (loggedInUsersArr[i].userId === activeUser.userId) {
+      loggedInUsersArr[i] = activeUser;
+    }
+  }
+
+  for (let i = 0; i < usersArr.length; i++) {
+    if (usersArr[i].userId === activeUser.userId) {
+      usersArr[i] = activeUser;
+    }
+  }
+
+  localStorage.setItem("loggedInUsers", JSON.stringify(loggedInUsersArr));
+  localStorage.setItem("users", JSON.stringify(usersArr));
+}
+
+const prifleInfoFollowBtn = document.querySelector(".prifleInfoFollowBtn");
+const profileInfoFollowIcon = document.querySelector(".profileInfoFollowIcon");
+const profileInfoBellIcon = document.querySelector(".profileInfoBellIcon");
+const profileInfoFollowBtnTxt = document.querySelector(
+  ".profileInfoFollowBtnTxt",
+);
+
+function displayFollowed() {
+  activeUser.pageFollowStatus = true;
+  profileInfoFollowIcon.classList.add("hidden");
+  profileInfoBellIcon.classList.remove("hidden");
+  profileInfoFollowBtnTxt.textContent = "Followed";
+}
+
+function displayNotFollowed() {
+  activeUser.pageFollowStatus = false;
+  profileInfoFollowIcon.classList.remove("hidden");
+  profileInfoBellIcon.classList.add("hidden");
+  profileInfoFollowBtnTxt.textContent = "Follow";
+}
+
+if (activeUser.pageFollowStatus) {
+  displayFollowed();
+} else {
+  displayNotFollowed();
+}
+
+prifleInfoFollowBtn.addEventListener("click", function () {
+  if (activeUser.pageFollowStatus){
+    displayNotFollowed();
+    updateUsers();
+  } else {
+    displayFollowed();
+    updateUsers();
+  }
+});
+
+// ამით ვპოულობთ pagesArr-ში შესაბამის page-ს და გამოგვაქვს მისი მონაცემები
+
+const activePage = pagesArr.find((page) => page.id === activePageId);
+const activePosts = activePage.postsArr;
+
+const mainContainer = document.querySelector(".mainContainer");
 const profileCoverImg = document.querySelector(".profileCoverImg");
 const profileImg = document.querySelector(".profileImg");
 const profileNameTxtContent = document.querySelectorAll(
@@ -140,8 +96,6 @@ profileBioResponsive.textContent = activePage.bio;
 // მარცხენა მხარეს ფოტოების გამოჩენა
 
 const allPhotosContainer = document.querySelector(".allPhotosContainer");
-
-let activePosts = activePage.postsArr;
 
 function showPhotosInContainer(limit) {
   for (let i = activePosts.length - 1; i >= limit; i--) {
@@ -211,22 +165,11 @@ profileNavigationBtn.forEach((button, i) => {
 const postsContainer = document.querySelector(".postsContainer");
 
 for (let i = activePosts.length - 1; i >= 0; i--) {
-  createPost(postsContainer, activePage, activePosts[i]);
+  createPost(
+    mainContainer,
+    postsContainer,
+    activePage,
+    activePosts[i],
+    "innerPagePost",
+  );
 }
-
-// მარცხენა მხარეზე sticky effect
-
-// const profileContentLeft = document.querySelector(".profileContentLeft");
-// const sticky = profileContentLeft.offsetTop;
-
-// function myFunction() {
-//   if (window.pageYOffset > sticky) {
-//      profileContentLeft.classList.add("positionFixed");
-//   } else {
-//     profileContentLeft.classList.remove("positionFixed");
-//   }
-// }
-
-// window.onscroll = function () {
-//   myFunction();
-// };

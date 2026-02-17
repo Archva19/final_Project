@@ -63,10 +63,8 @@ const sp_profileWindowPassRememBtn = document.querySelector(
   ".sp_profileWindowPassRememBtn",
 );
 
-let users = localStorage.getItem("users"); //. ყველა იუსერი
-let usersArr = JSON.parse(users); // ყველა იუსერის მასივი
-let loggedInUsers = localStorage.getItem("loggedInUsers"); // დალოგინებული იუსერები
-let loggedInUsersArr = JSON.parse(loggedInUsers); // დალოგინებული იუსერების მასივი
+let usersArr = JSON.parse(localStorage.getItem("users"));
+let loggedInUsersArr = JSON.parse(localStorage.getItem("loggedInUsers"));
 
 if (loggedInUsersArr && loggedInUsersArr.length > 0) {
   // თუ არსებობს დალოგინებული იუსერი დიზაინის შეცვლა
@@ -74,6 +72,7 @@ if (loggedInUsersArr && loggedInUsersArr.length > 0) {
   sp_quote.classList.add("hidden");
   sp_logo.classList.add("sp_logoLogInHis");
   sp_logoBox.classList.add("sp_logoBoxLogInHis");
+
   const recentLogins = document.createElement("div");
   sp_left.appendChild(recentLogins);
   sp_left.classList.add("sp_leftLogInHist");
@@ -87,6 +86,7 @@ if (loggedInUsersArr && loggedInUsersArr.length > 0) {
   recentLoginsTxt2.style.marginBottom = "24px";
   recentLogins.appendChild(recentLoginsTxt1);
   recentLogins.appendChild(recentLoginsTxt2);
+
   const recentLoginsProfiles = document.createElement("div");
   recentLoginsProfiles.classList.add("recentLoginsProfiles");
   recentLogins.appendChild(recentLoginsProfiles);
@@ -95,6 +95,23 @@ if (loggedInUsersArr && loggedInUsersArr.length > 0) {
 
   for (let i = 0; i < loggedInUsersArr.length; i++) {
     const currentUser = loggedInUsersArr[i];
+
+    function updateUsers() {
+      for (let i = 0; i < loggedInUsersArr.length; i++) {
+        if (loggedInUsersArr[i].userId === currentUser.userId) {
+          loggedInUsersArr[i] = currentUser;
+        }
+      }
+
+      for (let i = 0; i < usersArr.length; i++) {
+        if (usersArr[i].userId === currentUser.userId) {
+          usersArr[i] = currentUser;
+        }
+      }
+
+      localStorage.setItem("loggedInUsers", JSON.stringify(loggedInUsersArr));
+      localStorage.setItem("users", JSON.stringify(usersArr));
+    }
 
     const profileWind = document.createElement("button");
     profileWind.classList.add("profileWind");
@@ -153,13 +170,12 @@ if (loggedInUsersArr && loggedInUsersArr.length > 0) {
 
     ProfDelBtn.addEventListener("click", function (e) {
       e.stopPropagation();
+      currentUser.passRememStatus = false;
       recentLoginsProfiles.removeChild(profileWind);
       loggedInUsersArr = loggedInUsersArr.filter(
         (user) => user !== currentUser,
       );
-      localStorage.setItem("loggedInUsers", JSON.stringify(loggedInUsersArr));
-      localStorage.setItem("ActiveUser", JSON.stringify(currentUser));
-      localStorage.setItem("users", JSON.stringify(usersArr));
+      updateUsers();
       if (loggedInUsersArr.length === 0) {
         sp_left.removeChild(recentLogins);
         sp_quote.classList.remove("hidden");
@@ -300,13 +316,9 @@ if (loggedInUsersArr && loggedInUsersArr.length > 0) {
       if (sp_profileWindowPassInp.value === currentUser.password) {
         if (sp_profileWindowPassRememBtn.checked) {
           currentUser.passRememStatus = true;
-          localStorage.setItem("users", JSON.stringify(usersArr));
-          localStorage.setItem(
-            "loggedInUsers",
-            JSON.stringify(loggedInUsersArr),
-          );
-          localStorage.setItem("ActiveUser", JSON.stringify(currentUser));
         }
+        localStorage.setItem("ActiveUser", JSON.stringify(currentUser));
+        updateUsers();
         sp_passRememBtn.checked = false;
         window.location.href = "mainFbPage.html";
       }
@@ -582,6 +594,31 @@ if (activeUser) {
     }
   });
 }
+
+window.addEventListener("resize", function () {
+  sp_mobile.classList.remove("hidden");
+  mob_actUserLogInWind.classList.add("hidden");
+});
+
+const sp_mobileLogInBtn = document.querySelector(".sp_mobileLogInBtn");
+
+sp_mobileLogInBtn.addEventListener("click", function () {
+  for (let j = 0; j < usersArr.length; j++) {
+    if (
+      sp_mobile_emailInp.value === usersArr[j].emailOrNum &&
+      sp_mobile_passInp.value === usersArr[j].password
+    ) {
+      let ActUserId = usersArr[j].userId;
+      const includeVal = (user) => user.userId === ActUserId;
+      if (!loggedInUsersArr.some(includeVal)) {
+        loggedInUsersArr.push(usersArr[j]);
+      }
+      localStorage.setItem("loggedInUsers", JSON.stringify(loggedInUsersArr));
+      localStorage.setItem("ActiveUser", JSON.stringify(usersArr[j]));
+      window.location.href = "mainFbPage.html";
+    }
+  }
+});
 
 // ახალი ექაუნთის შემქმნაზე გადაყვანა ტელეფონზე
 const sp_mobileCrNewAccBtn = document.querySelector(".sp_mobileCrNewAccBtn");

@@ -40,6 +40,7 @@ button {
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
   display: block;
+  object-fit: cover;
 }
 
 .profileWindName {
@@ -538,6 +539,7 @@ button {
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   margin: 44px auto 0 auto;
+  object-fit: cover;
 }
 
 .sp_profileWindowLogInTxt {
@@ -941,6 +943,7 @@ button {
   height: 100px;
   border-radius: 50%;
   margin-bottom: 10px;
+  object-fit: cover;
 }
 
 .mob_actUserLogInWindName {

@@ -54,7 +54,7 @@ li_liBtn.addEventListener("click", function () {
         loggedInUsersArr.push(usersArr[i]);
       }
       localStorage.setItem("loggedInUsers", JSON.stringify(loggedInUsersArr));
-      localStorage.setItem("ActiveUser", usersArr[i]);
+      localStorage.setItem("ActiveUser", JSON.stringify(usersArr[i]));
     }
   }
 });
