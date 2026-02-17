@@ -188,26 +188,8 @@
 }
 
 .postBtnIcon {
-  background-image: url(icons/iconsCompilation4.webp);
-  filter: drop-shadow(0px 100px 0 #65686c);
-  transform: translateY(-100px);
-  background-size: 25px 1181px;
   width: 20px;
   height: 20px;
-  background-repeat: no-repeat;
-  display: inline-block;
-}
-
-.postLikeIcon {
-  background-position: 0px -697px;
-}
-
-.postCommentIcon {
-  background-position: 0 -487px;
-}
-
-.postShareIcon {
-  background-position: 0px -844px;
 }
 
 .postMoreBtnsWindow {
@@ -636,6 +618,7 @@ background-image: url(icons/iconCompilation11.png);
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 9999;
 }
 
 .postWindowForComments {
@@ -715,7 +698,7 @@ background-image: url(icons/iconCompilation11.png);
 
 .commentsBox {
   width: 100%;
-  padding: 12px 12px 80px 12px;
+  padding: 12px 12px 90px 12px;
   display: flex;
   flex-direction: column;
   gap: 10px;

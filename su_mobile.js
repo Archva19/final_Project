@@ -422,6 +422,8 @@ su_mobPassNextBtn.addEventListener("click", function () {
     su_mobPassHideBtn.classList.add("hidden");
     su_mobPassShowBtn.classList.add("hidden");
   }
+  su_mobSaveInfoWindSaveBtn.disabled = false;
+su_mobSaveInfoWindNotNowBtn.disabled = false;
 });
 
 su_mobPassInp.addEventListener("input", function () {
@@ -617,6 +619,8 @@ su_mobPassNextBtn.addEventListener("click", function () {
         newUser.firstName + " " + newUser.lastName;
       su_mobSaveInfoWindSaveBtn.addEventListener("click", function () {
         newUser.passRememStatus = true;
+        su_mobSaveInfoWindSaveBtn.disabled = true;
+        su_mobSaveInfoWindNotNowBtn.disabled = true;
         usersArr.push(newUser);
         loggedInUsersArr.push(newUser);
         localStorage.setItem("users", JSON.stringify(usersArr));
@@ -625,6 +629,8 @@ su_mobPassNextBtn.addEventListener("click", function () {
         window.location.href = "mainFbPage.html";
       });
       su_mobSaveInfoWindNotNowBtn.addEventListener("click", function () {
+        su_mobSaveInfoWindSaveBtn.disabled = true;
+        su_mobSaveInfoWindNotNowBtn.disabled = true;
         usersArr.push(newUser);
         loggedInUsersArr.push(newUser);
         localStorage.setItem("users", JSON.stringify(usersArr));
