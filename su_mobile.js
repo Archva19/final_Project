@@ -443,6 +443,9 @@ function inputEffect(input, addPh, deleteBtn) {
   input.addEventListener("focus", function () {
     addPh.style.opacity = 1;
     input.style.paddingTop = "25px";
+    if (input.value !== "") {
+      deleteBtn.classList.remove("hidden");
+    }
   });
 
   input.addEventListener("focusout", function () {
@@ -551,6 +554,12 @@ class User {
     password,
     passRememStatus,
     profileImage,
+    coverImage,
+    posts,
+    likedPosts,
+    pageFollowStatus,
+    pageVisibilityStatus,
+    hiddenPosts,
   ) {
     this.userId = userId;
     this.firstName = firstName;
@@ -561,10 +570,14 @@ class User {
     this.password = password;
     this.passRememStatus = passRememStatus;
     this.profileImage = profileImage;
+    this.coverImage = coverImage;
+    this.posts = posts;
+    this.likedPosts = likedPosts;
+    this.pageFollowStatus = pageFollowStatus;
+    this.pageVisibilityStatus = pageVisibilityStatus;
+    this.hiddenPosts = hiddenPosts;
   }
 }
-
-function jerArviciSaxeli(button, user) {}
 
 su_mobPassNextBtn.addEventListener("click", function () {
   if (su_mobPassInp.value.length >= 6) {
@@ -593,6 +606,12 @@ su_mobPassNextBtn.addEventListener("click", function () {
         su_mobPassInp.value,
         false,
         "https://scontent.ftbs2-2.fna.fbcdn.net/v/t1.30497-1/453178253_471506465671661_2781666950760530985_n.png?stp=dst-png_s720x720&_nc_cat=1&ccb=1-7&_nc_sid=207b4a&_nc_ohc=tNiY9GgxkcgQ7kNvwEQhYd_&_nc_oc=AdniKB0rbN0h48fhpHwU3mbzOFSPsi2Pu1k-RnrkmeqRGdbUKerqHWZa0IuuBRtYMe8&_nc_zt=24&_nc_ht=scontent.ftbs2-2.fna&oh=00_AfskEJEg3k4QaaoDgcCM780onQ_ukz8D0lXDR3wA7ut1ag&oe=69A82B7A",
+        "",
+        [],
+        [],
+        false,
+        true,
+        [],
       );
       su_mobTxt2SaveInfoName.textContent =
         newUser.firstName + " " + newUser.lastName;
@@ -652,7 +671,6 @@ su_mobPassNextBtn.addEventListener("click", function () {
           su_mobSaveInfoWindNotNowBtn.addEventListener("click", function () {
             changeStatus(false);
           });
-          
         }
       }
     }

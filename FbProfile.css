@@ -10,11 +10,16 @@ button {
   cursor: pointer;
 }
 
-.pageProfileWindow {
+body {
   background-color: #f3f4f7;
 }
 
+.mainContainer {
+  position: relative;
+}
+
 .profile {
+  margin-top: 56px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -59,6 +64,10 @@ button {
   justify-content: space-between;
   margin: 0 auto;
   width: 100%;
+}
+
+.profileImgBox {
+  position: relative;
 }
 
 .profileImg {
@@ -137,12 +146,12 @@ button {
   height: 16px;
 }
 
-.profileInfoMessageBtn {
+.profileInfoBlueBtn {
   background-color: #0866ff;
   color: white;
 }
 
-.profileInfoMessengerIcon {
+.profileInfoMessengerIcon, .profileInfoAddStoryrIcon {
   filter: drop-shadow(0px 100px 0 #fff);
   transform: translateY(-100px);
 }
@@ -253,10 +262,11 @@ button {
 }
 
 @media (max-width: 900px) {
-  .profileImg {
+  .profileImgBox {
     position: absolute;
     top: -160px;
   }
+
   .profileInfo {
     margin-top: 80px;
     flex-direction: column;
@@ -268,6 +278,10 @@ button {
   .profileInfoRight {
     flex-direction: column;
     text-align: center;
+  }
+
+  .profileFollowInfo{
+    justify-content: center;
   }
 
   .profileBio {
@@ -299,11 +313,10 @@ button {
 
 .profileContent {
   display: flex;
-  /* justify-content: space-between; */
   align-items: start;
   gap: 17px;
   max-width: 1202px;
-  width: 100vw;
+  width: 100%;
   margin: 17px auto;
   padding: 0 16px;
 }
@@ -311,14 +324,15 @@ button {
 .profileContentLeftBox {
   width: 100%;
   max-width: 490px;
+  display: flex;
 }
 
 .profileContentLeft {
-  /* max-width: 490px; */
   width: 100%;
   display: flex;
   flex-direction: column;
   gap: 17px;
+  top: 56px;
 }
 
 .profileContactInfo {
@@ -352,6 +366,7 @@ button {
   background-color: transparent;
   color: #080809;
   font-weight: 600;
+  font-size: 15px;
 }
 
 .allPhotosWindow {
@@ -417,16 +432,66 @@ button {
   max-width: 680px;
 }
 
-@media (max-width: 900px) {
-  .profileContent {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
+.positionFixed {
+  position: fixed;
+}
 
-  .profileContentLeftBox {
-    max-width: 680px;
-  }
+.activeUserProfile {
+  background-image: linear-gradient(white);
+}
+
+.activeUserCoverImgUploadBtn {
+  position: absolute;
+  bottom: 15px;
+  right: 30px;
+  width: 163.68px;
+  height: 36px;
+  border-radius: 8px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.activeUserCoverImgUploadIcon {
+  background-image: url(icons/iconCompilation10.png);
+  background-position: 0px -42px;
+  background-size: 21px 76px;
+  width: 16px;
+  height: 16px;
+  background-repeat: no-repeat;
+}
+
+.activeUserCoverImgUploadTxt {
+  font-size: 15px;
+  color: #080809;
+  font-weight: 600;
+}
+
+.activeUserProfileImgUploadBtn {
+  position: absolute;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #e2e4e8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  right: 10px;
+  bottom: 10px;
+  cursor: pointer;
+}
+
+.activeUserProfileImgUploadIcon {
+  background-image: url(https://static.xx.fbcdn.net/rsrc.php/v4/yZ/r/uBgK6wu5PW_.png);
+  background-position: 0px -21px;
+  background-size: 21px 76px;
+  width: 20px;
+  height: 20px;
+  background-repeat: no-repeat;
+  display: inline-block;
 }
 
 .hoverDarkGrayBtn:hover {
@@ -437,6 +502,30 @@ button {
   background-color: #f2f2f2;
 }
 
-.positionFixed {
-  position: fixed;
+@media (max-width: 900px) {
+  .profileContent {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .profileContentLeftBox {
+    max-width: 680px;
+  }
+
+  .profileContentLeft {
+    max-width: 680px;
+  }
+
+  .positionFixed {
+    position: static;
+  }
+
+  .activeUserCoverImgUploadBtn{
+    width: 48px;
+  }
+
+  .activeUserCoverImgUploadTxt{
+    display: none;
+  }
 }

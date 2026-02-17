@@ -337,6 +337,7 @@ button {
 .su_formErrMessage {
   position: absolute;
   display: flex;
+  z-index: 1;
 }
 
 .su_formErrMesMain {
@@ -362,15 +363,13 @@ button {
   border-radius: 1px;
 }
 
-.su_formFnErrMessage {
-  left: -143px;
+.su_formFnErrMessage{
+  top: 70px;
+  left: 50px;
 }
 
-.su_formFnErrMesArr,
-.su_formBdErrMesArr,
-.su_formEmailErrMesArr,
-.su_formPassErrMesArr {
-  transform: translateX(-10px) translateY(14px) rotate(45deg);
+.su_formFnErrMesArr{
+  transform: translateX(-30px) translateY(-7px) rotate(45deg);
 }
 
 .su_formLnErrMessage {
@@ -382,40 +381,44 @@ button {
   transform: translateX(-125px) translateY(-7px) rotate(45deg);
 }
 
-.su_formBdErrMessage {
-  left: -279px;
-  top: 84px;
-}
-
 .su_formBdErrMesMain,
 .su_formEmailErrMesMain,
 .su_formPassErrMesMain {
   width: 278px;
 }
 
-.su_formGendErrMessage {
-  z-index: 1;
-  left: -135px;
-  top: 159px;
-}
-
-.su_formGendErrMesArr {
-  transform: translateX(-10px) translateY(10px) rotate(45deg);
-}
-
 .su_formGendErrMesMain {
   width: 326px;
 }
 
+.su_formFnErrMesArr,
+.su_formBdErrMesArr,
+.su_formEmailErrMesArr,
+.su_formPassErrMesArr, 
+.su_formGendErrMesArr {
+  transform: translateX(-30px) translateY(-7px) rotate(45deg);
+}
+
+.su_formBdErrMessage{
+  top: 140px;
+  right: 0;
+}
+
+.su_formGendErrMessage {
+  right: 0;
+  top: 207px;
+}
+
 .su_formEmailErrMessage {
-  left: -279px;
-  top: 200px;
+  right: 0;
+  top: 257px;
 }
 
 .su_formPassErrMessage {
-  left: -279px;
-  top: 252px;
-}
+  right: 0;
+  top: 307px;
+} 
+
 
 .su_formHelpBox {
   z-index: 1;
@@ -427,7 +430,7 @@ button {
   line-height: 16px;
   color: #65676b;
   box-shadow: 0 12px 28px #0003;
-  left: -322px;
+  left: 76px;
 }
 
 .su_formBdHelpBox {
@@ -437,7 +440,7 @@ button {
 }
 
 .su_formGendHelpBox {
-  top: 156px;
+  top: 130px;
 }
 
 .su_formBdHelpDiffTxt {

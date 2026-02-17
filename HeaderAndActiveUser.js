@@ -1,12 +1,13 @@
 const activeUser = JSON.parse(localStorage.getItem("ActiveUser"));
-const userProfPict = document.querySelectorAll(".userProfPict");
-const userFullName = document.querySelectorAll(".userFullName");
+const activeUserProfPict = document.querySelectorAll(".userProfPict");
+const activeUserFullName = document.querySelectorAll(".userFullName");
+const body = document.querySelector("body");
 
-userProfPict.forEach((picture) => {
+activeUserProfPict.forEach((picture) => {
   picture.src = activeUser.profileImage;
 });
 
-userFullName.forEach((fullName) => {
+activeUserFullName.forEach((fullName) => {
   fullName.textContent = activeUser.firstName + " " + activeUser.lastName;
 });
 
@@ -31,7 +32,9 @@ function clearHeaderBtnEffects() {
   mainPageHeadCenterBtnActiveDecoLine.forEach((line) =>
     line.classList.add("hidden"),
   );
-  mainPageHeadCenterBtn.forEach((button) => button.classList.add("hoverLightGrayBtn"));
+  mainPageHeadCenterBtn.forEach((button) =>
+    button.classList.add("hoverLightGrayBtn"),
+  );
   mainPageHeadFindFriendsBtn.classList.remove("blueBtn");
 }
 
@@ -60,4 +63,37 @@ const mainPageHeadHomeBtn = document.querySelector(".mainPageHeadHomeBtn");
 
 mainPageHeadHomeBtn.addEventListener("click", function () {
   window.location.href = "mainFbPage.html";
+});
+
+// აქტიური იუსერის გვერდზე გადასვლა
+
+const profileBtn = document.querySelectorAll(".profileBtn");
+
+profileBtn.forEach((btn) => {
+  btn.addEventListener("mousedown", function (e) {
+    e.preventDefault();
+    window.location.href = "activeUserProfile.html";
+  });
+});
+
+// log out
+
+const mainPageHeadProfileBtn = document.querySelector(
+  ".mainPageHeadProfileBtn",
+);
+const headerLogOutWindow = document.querySelector(".headerLogOutWindow");
+
+mainPageHeadProfileBtn.addEventListener("click", function () {
+  headerLogOutWindow.classList.toggle("hidden");
+});
+
+mainPageHeadProfileBtn.addEventListener("focusout", function () {
+  headerLogOutWindow.classList.add("hidden");
+});
+
+const logOutBtn = document.querySelector(".logOutBtn");
+
+logOutBtn.addEventListener("mousedown", function (e) {
+  e.preventDefault();
+  window.location.href = "index.html";
 });

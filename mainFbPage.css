@@ -10,14 +10,18 @@ button {
   cursor: pointer;
 }
 
-.mainContainer {
+body {
   background-color: #f3f4f7;
+}
+
+.mainContainer {
   display: flex;
   flex-direction: column;
   position: relative;
   align-items: center;
   justify-content: center;
   padding-top: 56px;
+  overflow: hidden;
 }
 
 .mainPageMainContent {
@@ -107,6 +111,7 @@ button {
 .mainPageLeftBtnBoxProfIcon {
   border-radius: 50%;
   border: 0.3px solid rgb(123, 123, 123);
+  object-fit: cover;
 }
 
 .mainPageLeftBtnBoxTxt {
@@ -181,6 +186,7 @@ button {
   width: 100%;
   height: 100%;
   border-radius: 50%;
+  object-fit: cover;
 }
 
 .mainPagePostCrBoxBtn2 {
@@ -279,6 +285,7 @@ button {
 
 .mainPageGrChatsWindow {
   position: fixed;
+  margin-inline: 10px;
 }
 
 .groupChatTxt {
@@ -295,6 +302,18 @@ button {
   align-items: center;
   border: none;
   background-color: transparent;
+  width: 300px;
+  height: 44px;
+  border-radius: 10px;
+  padding-left: 5px;
+}
+
+.crGroupChatBtn:hover{
+  background-color: #e6e7ea;
+}
+
+.crGroupChatBtn:hover .addChatIconBox{
+  background-color: #d7d9dd;
 }
 
 .addChatIconBox {
@@ -369,11 +388,211 @@ button {
   opacity: 1;
 }
 
-/* .sticky {
+.postCreateWindowBox {
   position: fixed;
   top: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f4f4f494;
+}
+
+.postCreateWindow {
+  max-width: 500px;
   width: 100%;
-} */
+  background-color: white;
+  box-shadow:
+    0 12px 28px 0 rgba(0, 0, 0, 0.2),
+    0 2px 4px 0 rgba(0, 0, 0, 0.1),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.5);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.postCreateWindowCloseBtn {
+  position: absolute;
+  top: 15px;
+  right: 13px;
+}
+
+.postCreateWindowTxt {
+  text-align: center;
+  padding: 20px 0;
+  font-weight: 700;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  font-size: 20px;
+  line-height: 23px;
+  color: #080809;
+}
+
+.postCreateWindowActiveUserInfo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 0;
+  padding: 0 16px;
+}
+
+.postCreateWindowActiveUserImg {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.postCreateWindowUserInfoRight {
+  display: flex;
+  flex-direction: column;
+}
+
+.postCreateWindowUserName {
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 20px;
+}
+
+.postCreateWindowAudienceBtn {
+  width: 87.14px;
+  height: 26.23px;
+  display: flex;
+  gap: 5px;
+  padding: 4px 8px;
+  background-color: #e2e5e9;
+  border: none;
+  align-items: center;
+  border-radius: 6px;
+}
+
+.postCreateWindowAudienceBtnIcon {
+  width: 12px;
+  height: 12px;
+}
+
+.postCreateWindowAudienceBtnArr {
+  width: 8px;
+  height: 8px;
+}
+
+.postCreateWindowAudienceBtnTxt {
+  font-size: 13px;
+  color: #080809;
+}
+
+.postCreateWindowCentralPart{
+  max-height: 50vh;
+  overflow-y: auto;
+}
+
+.postCreateWindowTxtInputBox {
+  padding: 0 16px;
+  width: 100%;
+  flex-grow: 1;
+}
+
+.postCreateWindowTxtInput {
+  border: none;
+  width: 100%;
+  display: flex;
+  position: relative;
+  resize: none;
+  field-sizing: content;
+  font-size: 24px;
+  overflow: visible;
+  margin-bottom: 16px;
+}
+
+.postCreateWindowTxtInput:focus {
+  outline: none;
+}
+
+.postCreateWindowUploadedImgBox{
+  position: relative;
+  margin: 0 16px;
+  max-width: calc(100% - 32px);
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.postCreateWindowUploadedImg{
+  width: 100%;
+  border-radius: 12px;
+}
+
+.postCreateWindowImgDeleteBtn{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border-radius: 50%;
+  background-color: white;
+  width: 28.8px;
+  height: 28.8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+}
+
+.postCreateWindowImgDeleteBtnIcon{
+  width: 16px;
+  height: 16px;
+}
+
+.postCreateWindowAddBox {
+  margin: 0 16px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 8px;
+  border: 1px solid #d0d3d7;
+  height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.postCreateWindowAddTxt {
+  font-weight: 600;
+  color: #080809;
+  font-size: 15px;
+  line-height: 20px;
+}
+
+.postCreateWindowImgLabel {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.postCreateWindowImgIcon {
+  width: 24px;
+  height: 24px;
+}
+
+.postCreateWindowPostBtn {
+  margin: 16px;
+  padding: 12px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 36px;
+  color: #bcc0c4;
+  background-color: #e2e5e9;
+  border-radius: 8px;
+  border: none;
+  font-weight: 600;
+}
+
+.postCreateWindowPostActiveBtn {
+  background-color: #0866ff;
+  color: white;
+}
 
 .hoverDarkGrayBtn:hover {
   background-color: #d7d9dd;

@@ -7,7 +7,6 @@
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   margin-bottom: 12px;
   position: relative;
-  overflow: hidden;
 }
 
 .mainPagePostTop {
@@ -45,6 +44,11 @@
   font-size: 15px;
   font-weight: 600;
   color: #080809;
+  cursor: pointer;
+}
+
+.postPageName:hover {
+  text-decoration: underline;
 }
 
 .postFollowBtn {
@@ -52,6 +56,10 @@
   color: #0064d1;
   border: none;
   background-color: transparent;
+}
+
+.postFollowBtnIfFollowed{
+  color: #65686C;
 }
 
 .postTopCenterBottom {
@@ -67,6 +75,11 @@
 .postAudienceIcon {
   width: 23px;
   height: 23px;
+}
+
+.postDate:hover {
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 .postTopBtns {
@@ -94,7 +107,7 @@
 }
 
 .postTxtContent {
-  padding: 0 0 10px 15px;
+  padding: 0 15px 10px 15px;
   font-size: 15px;
   color: #080809;
 }
@@ -157,6 +170,7 @@
   display: flex;
   align-items: center;
   padding: 5px 15px;
+  position: relative;
 }
 
 .postBtn {
@@ -200,28 +214,38 @@
   filter: drop-shadow(0 0px 6px rgba(0, 0, 0, 0.2));
   position: absolute;
   top: 68px;
-  right: 70px;
   width: 344px;
-  height: 445px;
   background-color: white;
   border-radius: 10px 0 10px 10px;
   padding: 8px;
   display: flex;
   flex-direction: column;
-
+  z-index: 1;
 }
 
 .postMoreBtnsWindow::before {
   content: "";
-  top: 52px;
-  right: -79px;
   position: absolute;
-  width: 30px;
-  height: 30px;
-  background-size: 30px;
-  background-image: url("icons/arrow_drop_down.png");
-  transform: rotate(315deg) translateY(-300px);
-  filter: drop-shadow(0px 200px 0px #ffffff);
+  width: 100px;
+  height: 100px;
+  background-size: 120px;
+  background-repeat: no-repeat;
+  background-image: url("icons/arrow_drop_down_FFFFFF.png");
+  transform: rotate(315deg);
+  z-index: 5;
+}
+
+.postMoreBtnsWindow::before {
+  top: -55px;
+  right: -25px;
+}
+
+.feedPagePostMoreBtnsWindow {
+  right: 70px;
+}
+
+.innerPagePostMoreBtnsWindow {
+  right: 30px;
 }
 
 .postMoreBtn {
@@ -245,7 +269,7 @@
   background-repeat: no-repeat;
 }
 
-.marginTop-10px{
+.marginTop-10px {
   margin-top: -10px;
 }
 
@@ -273,16 +297,58 @@
   background-size: 21px 336px;
 }
 
-.whySeeingBtnIcon {
-  background-image: url(icons/iconCompilation9.png);
-  background-position: 0px -657px;
-  background-size: 33px 996px;
+.turnOffNotificationsBtnIcon {
+  background-image: url(icons/iconCompilation8.png);
+  background-position: 0px -42px;
+  background-size: 21px 336px;
 }
 
 .embedBtnIcon {
   background-image: url(icons/iconCompilation8.png);
   background-position: 0px -210px;
   background-size: 21px 336px;
+}
+
+.pinPostBtnIcon{
+  background-image: url(icons/iconCompilation12.png);
+    background-position: 0px -298px;
+    background-size: 25px 416px;
+}
+
+.editPostBtnIcon{
+      background-image: url(icons/iconCompilation13.png);
+    background-position: 0px -21px;
+    background-size: 21px 254px;
+}
+
+.editAudienceBtnIcon{
+  background-image: url(icons/iconCompilation14.png);
+    background-position: 0px -42px;
+    background-size: 21px 63px;
+}
+
+.turnOffTranslationsBtnIcon{
+background-image: url(icons/iconCompilation11.png);
+    background-position: 0px -235px;
+    background-size: 25px 273px;
+}
+
+.editDateBtnIcon{
+      background-image: url(icons/iconCompilation15.png);
+    background-position: 0px -130px;
+    background-size: 25px 786px;
+}
+
+.moverToArchiveBtnIcon{
+  background-image: url(icons/iconCompilation16.png);
+    background-position: 0px -192px;
+    background-size: 25px 415px;
+}
+
+.moveToTrashBtnIcon{
+  background-image: url(icons/iconCompilation16.png);
+    background-position: 0px -360px;
+    background-size: 25px 415px;
 }
 
 .postMoreBtnBoxTxts {
@@ -313,6 +379,93 @@
   margin: 5px 0;
 }
 
+@keyframes postBtnMessage {
+  0% {
+    bottom: -80px;
+  }
+
+  3% {
+    bottom: 20px;
+  }
+
+  97% {
+    bottom: 20px;
+  }
+
+  100% {
+    bottom: -80px;
+  }
+}
+
+@keyframes postBtnMessage2 {
+  0% {
+    bottom: 20px;
+  }
+
+  100% {
+    bottom: -80px;
+  }
+}
+
+.postBtnMessageAnimation {
+  animation: postBtnMessage 3s ease-out 0s 1 normal forwards;
+}
+
+.postBtnMessageAnimation2 {
+  animation: postBtnMessage2 0.2s ease-out 0s 1 normal forwards;
+}
+
+.postBtnMessage {
+  position: fixed;
+  left: 20px;
+  background-color: #242526;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 20px 15px;
+  border-radius: 10px;
+  overflow: hidden;
+  z-index: 9999;
+}
+
+.postBtnMessageTxt {
+  font-size: 13px;
+  color: #e2e4e8;
+  width: 180px;
+}
+
+.postBtnMessageUndoBtn {
+  border: none;
+  background-color: transparent;
+  color: #5ba6ff;
+}
+
+.postBtnMessageUndoBtn:hover {
+  text-decoration: underline;
+}
+
+.postBtnMessageCloseBtn {
+  border: none;
+  background-color: #3a3b3c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+}
+
+.postBtnMessageCloseBtn:hover {
+  background-color: #4e4f50;
+}
+
+.postBtnMessageCloseBtnIcon {
+  width: 10px;
+  height: 10px;
+  filter: drop-shadow(0px 100px 0 #fff);
+  transform: translateY(-100px);
+}
+
 @media (max-width: 600px) {
   .postMoreBtnsWindow {
     border-radius: 10px;
@@ -327,6 +480,354 @@
   }
 }
 
-.hidden{
+.hiddenPostWindow,
+.SnoozedPagePostWindow {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  gap: 20px;
+}
+
+.hiddenPostWindowBtn {
+  display: flex;
+  align-items: center;
+  border: none;
+  background-color: transparent;
+  gap: 15px;
+}
+
+.hiddenPostWindowBoxLeft {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.hiddenPostWindowIfSnoozedBox {
+  justify-content: space-between;
+}
+
+.hiddenPostWindowBox1 {
+  justify-content: space-between;
+}
+
+.hiddenPostWindowIcon {
+  width: 20px;
+  height: 20px;
+}
+
+.hiddenPostWindowTxts {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.hiddenPostWindowTxt1 {
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: 500;
+  color: #080809;
+}
+
+.hiddenPostWindowTxt2 {
+  font-size: 12px;
+  line-height: 17px;
+  font-weight: 400;
+  color: #65686c;
+}
+
+.hiddenPostWindowDecoLine {
+  width: 100%;
+  height: 1px;
+  border-bottom: 1px solid #d0d3d7;
+}
+
+.hiddenPostWindowHideUndoBtn,
+.hiddenPostWindowUndoSnoozeBtn {
+  width: 62px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 10px;
+  background-color: #e2e4e8;
+  font-size: 15px;
+  line-height: 20px;
+  color: #080809;
+  font-weight: 600;
+}
+
+.hiddenPostWindowHideUndoBtn:hover,
+.hiddenPostWindowUndoSnoozeBtn:hover {
+  background-color: #d7d9dd;
+}
+
+@keyframes emojisWindowAppear {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.postEmojisWindow {
+  position: absolute;
+  box-shadow:
+    0 0 0 1px rgba(0, 0, 0, 0.1),
+    0 2px 2px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  display: flex;
+  gap: 7px;
+  border-radius: 40px;
+  padding: 5px;
+  top: -40px;
+  animation: emojisWindowAppear 0.1s linear 0s 1 normal forwards;
+}
+
+.postEmoji {
+  width: 39px;
+  height: 39px;
+}
+
+@keyframes emojiScaleUp {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.2);
+  }
+}
+
+.postEmoji:hover {
+  animation: emojiScaleUp 0.1s linear 0s 1 normal forwards;
+  cursor: pointer;
+}
+
+.emojiReaction {
+  width: 18px;
+  height: 18px;
+}
+
+.blueTxtColor {
+  color: #0866ff;
+}
+
+.redTxtColor {
+  color: #dd2334;
+}
+
+.yellowTxtColor {
+  color: #887000;
+}
+
+.postWindowBoxforComments {
+  width: 100vw;
+  height: 100vh;
+  padding: 32px 0;
+  background-color: #f4f4f494;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.postWindowForComments {
+  max-width: 700px;
+  height: 100%;
+  max-height: calc(100vh - 64px);
+  width: 100%;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 12px;
+  overflow: auto;
+  position: relative;
+}
+
+.windowForCommentsTop {
+  width: 100%;
+  display: flex;
+  height: 60px;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  border-bottom: 1px solid #f0f2f5;
+}
+
+.windowForCommentsTxt {
+  position: fixed;
+  width: 100%;
+  max-width: 700px;
+  height: 60px;
+  background-color: white;
+  z-index: 1;
+  border-top-right-radius: 12px;
+  border-top-left-radius: 12px;
+  font-size: 20px;
+  line-height: 23px;
+  color: #080809;
+  font-weight: 700;
+  vertical-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.windowForCommentsCloseBtnBox {
+  z-index: 3;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  padding: 13px 15px;
+  width: 100%;
+  max-width: 700px;
+}
+
+.windowForCommentsCloseBtn {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: #e3e5e9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  overflow: hidden;
+}
+
+.windowForCommentsCloseBtn:hover {
+  background-color: #d7d9dd;
+}
+
+.windowForCommentsCloseBtnIcon {
+  width: 15px;
+  height: 15px;
+  filter: drop-shadow(0px 100px 0 #080809);
+  transform: translateY(-100px);
+}
+
+.commentsBox {
+  width: 100%;
+  padding: 12px 12px 80px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.commentBox {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 10px;
+}
+
+.commentAuthorImg {
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  object-fit: cover;
+}
+
+.commentContentBox {
+  background-color: #f0f2f5;
+  color: #080809;
+  border-radius: 16px;
+  padding: 8px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  max-width: 608px;
+  word-wrap: break-word;
+}
+
+.commentAuthorName {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.commentTxtContent {
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: 400;
+}
+
+.activeUserCommentWindow {
+  position: fixed;
+  bottom: 32px;
+  width: 100%;
+  max-width: 700px;
+  padding: 15px;
+  background-color: white;
+  display: flex;
+  align-items:flex-start;
+  gap: 15px;
+  border-top: 1px solid #ebebeb;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+.activeUserCommentWindowProfImg {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.activeUserCommentInputBox {
+  min-height: 36px;
+  max-width: 630px;
+  width: 100%;
+  position: relative;
+}
+
+.activeUserCommentInput {
+  background-color: #f0f2f5;
+  border-radius: 18px;
+  width: 100%;
+  padding: 14px 40px 14px 0;
+  resize: none;
+  field-sizing: content;
+  min-height: 36px;
+  max-height: 30vh;
+  border: none;
+  padding-left: 15px;
+  word-wrap: break-word;
+}
+
+.activeUserCommentInput:focus {
+  outline: none;
+}
+
+.commentBtn {
+  position: absolute;
+  top: 10px;
+  right: 13px;
+  width: 25px;
+  height: 25px;
+  border: none;
+  background-color: transparent;
+  overflow: hidden;
+}
+
+.commentIcon {
+  width: 20px;
+  height: 20px;
+  filter: drop-shadow(0px 100px 0 #bdc2c9);
+  transform: translateY(-100px);
+}
+
+.commentActiveIcon {
+  filter: drop-shadow(0px 100px 0 #0063da);
+}
+
+.hidden {
   display: none !important;
 }

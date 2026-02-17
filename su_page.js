@@ -148,7 +148,7 @@ su_formEmailErr.addEventListener("click", function () {
 });
 
 su_formPassInp.addEventListener("focusout", function () {
-  if (su_formPassInp.value === "") {
+  if (su_formPassInp.value === "" || su_formPassInp.value.length < 6) {
     su_formPassErr.classList.remove("hidden");
     su_formPassInp.classList.add("inpErr");
     su_formPassErrMessage.classList.add("hidden");
@@ -170,18 +170,28 @@ su_formPassErr.addEventListener("click", function () {
   su_formPassInp.focus();
 });
 
+su_formBdYear.addEventListener("focusout", function () {
+  su_formBdErrMessage.classList.add("hidden");
+  if (Number(su_formBdYear.value) >= currentYear - 5) {
+    su_formBdErr.classList.remove("hidden");
+    su_formSel.forEach((sel) => {
+      sel.classList.add("inpErr");
+    });
+  } else {
+    su_formBdErr.classList.add("hidden");
+    su_formSel.forEach((sel) => {
+      sel.classList.remove("inpErr");
+    });
+  }
+});
+
 su_formSel.forEach((sel) => {
   sel.addEventListener("focusout", function () {
-    su_formBdErrMessage.classList.add("hidden");
-    if (Number(su_formBdYear.value) >= currentYear - 5) {
+    if (!su_formBdErrMessage.classList.contains("hidden")) {
       su_formBdErr.classList.remove("hidden");
+      su_formBdErrMessage.classList.add("hidden");
       su_formSel.forEach((sel) => {
         sel.classList.add("inpErr");
-      });
-    } else {
-      su_formBdErr.classList.add("hidden");
-      su_formSel.forEach((sel) => {
-        sel.classList.remove("inpErr");
       });
     }
   });
@@ -209,11 +219,24 @@ su_formBdErr.addEventListener("click", function () {
 });
 
 gender.forEach((radio) => {
-  radio.addEventListener("focus", function () {
+  radio.addEventListener("change", function () {
+    su_formGendErrMessage.classList.add("hidden");
     su_formGendErr.classList.add("hidden");
     su_formGenInpItem.forEach((item) => {
       item.classList.remove("inpErr");
     });
+  });
+});
+
+gender.forEach((radio) => {
+  radio.addEventListener("focusout", function () {
+    if (!gender[0].checked && !gender[1].checked) {
+      su_formGendErr.classList.remove("hidden");
+      su_formGendErrMessage.classList.add("hidden");
+      su_formGenInpItem.forEach((item) => {
+        item.classList.add("inpErr");
+      });
+    }
   });
 });
 
@@ -251,6 +274,12 @@ class User {
     password,
     passRememStatus,
     profileImage,
+    coverImage,
+    posts,
+    likedPosts,
+    pageFollowStatus,
+    pageVisibilityStatus,
+    hiddenPosts
   ) {
     this.userId = userId;
     this.firstName = firstName;
@@ -261,6 +290,12 @@ class User {
     this.password = password;
     this.passRememStatus = passRememStatus;
     this.profileImage = profileImage;
+    this.coverImage = coverImage;
+    this.posts = posts;
+    this.likedPosts = likedPosts;
+    this.pageFollowStatus = pageFollowStatus;
+    this.pageVisibilityStatus = pageVisibilityStatus;
+    this.hiddenPosts = hiddenPosts;
   }
 }
 
@@ -273,8 +308,7 @@ su_formSuBtn.addEventListener("click", function () {
     }
   }
 
-  let birthday =
-    su_formBdDay.value + "." + su_formBdMon.value + "." + su_formBdYear.value;
+  let birthday = su_formBdYear.value + "-" + su_formBdMon.value + "-" + su_formBdDay.value;
 
   if (su_formFnInp.value === "") {
     su_formFnErr.classList.remove("hidden");
@@ -283,7 +317,6 @@ su_formSuBtn.addEventListener("click", function () {
   }
 
   if (su_formLnInp.value === "") {
-    su_formLnInp.classList.remove("hidden");
     su_formLnInp.classList.add("inpErr");
     su_formLnErr.classList.remove("hidden");
   }
@@ -334,7 +367,7 @@ su_formSuBtn.addEventListener("click", function () {
   )
     su_formEmailErrMessage.classList.remove("hidden");
 
-  if (su_formPassInp.value === "") {
+  if (su_formPassInp.value === "" || su_formPassInp.value.length < 6) {
     su_formPassErr.classList.remove("hidden");
     su_formPassInp.classList.add("inpErr");
   }
@@ -345,7 +378,8 @@ su_formSuBtn.addEventListener("click", function () {
     Number(su_formBdYear.value) < currentYear - 5 &&
     checkedGender &&
     su_formEmailInp.value !== "" &&
-    su_formPassInp.value === ""
+    validateEmailandPhone(su_formEmailInp.value) &&
+    (su_formPassInp.value === "" || su_formPassInp.value.length < 6)
   )
     su_formPassErrMessage.classList.remove("hidden");
 
@@ -368,6 +402,7 @@ su_formSuBtn.addEventListener("click", function () {
     (gender[0].checked || gender[1].checked) &&
     su_formEmailInp.value !== "" &&
     su_formPassInp.value !== "" &&
+    su_formPassInp.value.length >= 6 &&
     validateEmailandPhone(su_formEmailInp.value) &&
     !usersArr.some(includeVal)
   ) {
@@ -382,6 +417,12 @@ su_formSuBtn.addEventListener("click", function () {
       su_formPassInp.value,
       false,
       "https://scontent.ftbs2-2.fna.fbcdn.net/v/t1.30497-1/453178253_471506465671661_2781666950760530985_n.png?stp=dst-png_s720x720&_nc_cat=1&ccb=1-7&_nc_sid=207b4a&_nc_ohc=tNiY9GgxkcgQ7kNvwEQhYd_&_nc_oc=AdniKB0rbN0h48fhpHwU3mbzOFSPsi2Pu1k-RnrkmeqRGdbUKerqHWZa0IuuBRtYMe8&_nc_zt=24&_nc_ht=scontent.ftbs2-2.fna&oh=00_AfskEJEg3k4QaaoDgcCM780onQ_ukz8D0lXDR3wA7ut1ag&oe=69A82B7A",
+      "",
+      [],
+      [],
+      false,
+      true,
+      []
     );
     usersArr.push(newUser);
     loggedInUsersArr.push(newUser);
