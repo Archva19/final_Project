@@ -423,7 +423,7 @@ su_mobPassNextBtn.addEventListener("click", function () {
     su_mobPassShowBtn.classList.add("hidden");
   }
   su_mobSaveInfoWindSaveBtn.disabled = false;
-su_mobSaveInfoWindNotNowBtn.disabled = false;
+  su_mobSaveInfoWindNotNowBtn.disabled = false;
 });
 
 su_mobPassInp.addEventListener("input", function () {

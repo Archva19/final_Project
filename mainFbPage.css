@@ -298,11 +298,11 @@ body {
   padding-left: 5px;
 }
 
-.crGroupChatBtn:hover{
+.crGroupChatBtn:hover {
   background-color: #e6e7ea;
 }
 
-.crGroupChatBtn:hover .addChatIconBox{
+.crGroupChatBtn:hover .addChatIconBox {
   background-color: #d7d9dd;
 }
 
@@ -473,7 +473,7 @@ body {
   color: #080809;
 }
 
-.postCreateWindowCentralPart{
+.postCreateWindowCentralPart {
   max-height: 50vh;
   overflow-y: auto;
 }
@@ -500,7 +500,7 @@ body {
   outline: none;
 }
 
-.postCreateWindowUploadedImgBox{
+.postCreateWindowUploadedImgBox {
   position: relative;
   margin: 0 16px;
   max-width: calc(100% - 32px);
@@ -508,12 +508,12 @@ body {
   margin-bottom: 16px;
 }
 
-.postCreateWindowUploadedImg{
+.postCreateWindowUploadedImg {
   width: 100%;
   border-radius: 12px;
 }
 
-.postCreateWindowImgDeleteBtn{
+.postCreateWindowImgDeleteBtn {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -527,7 +527,7 @@ body {
   border: none;
 }
 
-.postCreateWindowImgDeleteBtnIcon{
+.postCreateWindowImgDeleteBtnIcon {
   width: 16px;
   height: 16px;
 }

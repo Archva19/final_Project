@@ -234,7 +234,8 @@ let imgLink;
 postCreateWindowTxtInput.addEventListener("input", function () {
   enablePostBtn();
 
-  if (postCreateWindowTxtInput.value === "" && imgLink === undefined) {
+  let trimmedInput = postCreateWindowTxtInput.value.trim();
+  if (trimmedInput.length === 0 && imgLink === undefined) {
     disablePostBtn();
   }
 

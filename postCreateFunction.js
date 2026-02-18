@@ -259,7 +259,7 @@ function createPost(mainContainer, postsContainer, page, post, postType) {
 
   const postLikeInterractIcon = document.createElement("img");
   postLikeInterractIcon.classList.add("postBtnIcon");
-  postLikeInterractIcon.src = "icons/likeIcon.png"
+  postLikeInterractIcon.src = "icons/likeIcon.png";
   postLikeBtn.appendChild(postLikeInterractIcon);
 
   const postLikeTxt = document.createElement("p");
@@ -275,7 +275,7 @@ function createPost(mainContainer, postsContainer, page, post, postType) {
 
   const postCommentIcon = document.createElement("img");
   postCommentIcon.classList.add("postBtnIcon");
-  postCommentIcon.src = "icons/commentIcon.png"
+  postCommentIcon.src = "icons/commentIcon.png";
   postCommentBtn.appendChild(postCommentIcon);
 
   const postCommentTxt = document.createElement("p");
@@ -292,7 +292,7 @@ function createPost(mainContainer, postsContainer, page, post, postType) {
 
   const postShareIcon = document.createElement("img");
   postShareIcon.classList.add("postBtnIcon");
-  postShareIcon.src = "icons/shareIcon.png"
+  postShareIcon.src = "icons/shareIcon.png";
   postShareBtn.appendChild(postShareIcon);
 
   const postShareTxt = document.createElement("p");
@@ -309,8 +309,18 @@ function createPost(mainContainer, postsContainer, page, post, postType) {
     window.location.href = "FbPage.html";
   }
 
-  postProfImg.addEventListener("click", redirectToPage);
-  postPageName.addEventListener("click", redirectToPage);
+  function redirectToProfile() {
+    clearHeaderBtnEffects();
+    window.location.href = "activeUserProfile.html";
+  }
+
+  if (postType === "feedPagePost" || postType === "innerPagePost") {
+    postProfImg.addEventListener("click", redirectToPage);
+    postPageName.addEventListener("click", redirectToPage);
+  } else if (postType === "ActiveUserfeedPagePost") {
+    postProfImg.addEventListener("click", redirectToProfile);
+    postPageName.addEventListener("click", redirectToProfile);
+  }
 
   // სამ წერტილზე დაჭერის დროს გამოსაჩენი ფანჯარა
 
@@ -1701,7 +1711,7 @@ function createPost(mainContainer, postsContainer, page, post, postType) {
 
   const comBoxPostLikeInterractIcon = document.createElement("img");
   comBoxPostLikeInterractIcon.classList.add("postBtnIcon");
-  comBoxPostLikeInterractIcon.src = "icons/likeIcon.png"
+  comBoxPostLikeInterractIcon.src = "icons/likeIcon.png";
   comBoxPostLikeBtn.appendChild(comBoxPostLikeInterractIcon);
 
   const comBoxPostLikeTxt = document.createElement("p");
@@ -1717,7 +1727,7 @@ function createPost(mainContainer, postsContainer, page, post, postType) {
 
   const comBoxPostCommentIcon = document.createElement("img");
   comBoxPostCommentIcon.classList.add("postBtnIcon");
-  comBoxPostCommentIcon.src = "icons/commentIcon.png"
+  comBoxPostCommentIcon.src = "icons/commentIcon.png";
   comBoxPostCommentBtn.appendChild(comBoxPostCommentIcon);
 
   const comBoxPostCommentTxt = document.createElement("p");
@@ -1734,7 +1744,7 @@ function createPost(mainContainer, postsContainer, page, post, postType) {
 
   const comBoxPostShareIcon = document.createElement("img");
   comBoxPostShareIcon.classList.add("postBtnIcon");
-  comBoxPostShareIcon.src = "icons/shareIcon.png"
+  comBoxPostShareIcon.src = "icons/shareIcon.png";
   comBoxPostShareBtn.appendChild(comBoxPostShareIcon);
 
   const comBoxPostShareTxt = document.createElement("p");
@@ -1745,8 +1755,13 @@ function createPost(mainContainer, postsContainer, page, post, postType) {
 
   // გვერდის პროფაილზე ან სახელზე დაჭერის დროს აქტიურ გვერდად დაყენება და გვერდზე გადასვლა
 
-  comBoxPostProfImg.addEventListener("click", redirectToPage);
-  comBoxPostPageName.addEventListener("click", redirectToPage);
+  if (postType === "feedPagePost" || postType === "innerPagePost") {
+    comBoxPostProfImg.addEventListener("click", redirectToPage);
+    comBoxPostPageName.addEventListener("click", redirectToPage);
+  } else if (postType === "ActiveUserfeedPagePost") {
+    comBoxPostProfImg.addEventListener("click", redirectToProfile);
+    comBoxPostPageName.addEventListener("click", redirectToProfile);
+  }
 
   // სამ წერტილზე დაჭერის დროს გამოსაჩენი ფანჯარა
 
@@ -1886,11 +1901,11 @@ function createPost(mainContainer, postsContainer, page, post, postType) {
     commentsBox.style.paddingBottom = height + "px";
   });
 
-  activeUserCommentInput.addEventListener("keydown", function(event){
-    if (event.key === "Enter"){
+  activeUserCommentInput.addEventListener("keydown", function (event) {
+    if (event.key === "Enter") {
       event.preventDefault();
     }
-  })
+  });
 
   activeUserCommentInputBox.addEventListener("keydown", function (event) {
     if (event.key === "Enter") {
