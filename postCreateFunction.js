@@ -1572,17 +1572,6 @@ function createPost(mainContainer, postsContainer, page, post, postType) {
       activeUser.firstName + " " + activeUser.lastName;
   }
 
-  if (postType === "feedPagePost") {
-    const comBoxSpanItem1 = document.createElement("span");
-    comBoxPostTopCenterTop.appendChild(comBoxSpanItem1);
-    comBoxSpanItem1.textContent = "·";
-
-    const comBoxPostFollowBtn = document.createElement("button");
-    comBoxPostFollowBtn.classList.add("postFollowBtn");
-    comBoxPostTopCenterTop.appendChild(comBoxPostFollowBtn);
-    comBoxPostFollowBtn.textContent = "Follow";
-  }
-
   const comBoxPostTopCenterBottom = document.createElement("div");
   comBoxPostTopCenterBottom.classList.add("postTopCenterBottom");
   comBoxPostTopCenter.appendChild(comBoxPostTopCenterBottom);
