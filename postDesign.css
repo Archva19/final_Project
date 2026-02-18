@@ -58,8 +58,8 @@
   background-color: transparent;
 }
 
-.postFollowBtnIfFollowed{
-  color: #65686C;
+.postFollowBtnIfFollowed {
+  color: #65686c;
 }
 
 .postTopCenterBottom {
@@ -291,46 +291,46 @@
   background-size: 21px 336px;
 }
 
-.pinPostBtnIcon{
+.pinPostBtnIcon {
   background-image: url(icons/iconCompilation12.png);
-    background-position: 0px -298px;
-    background-size: 25px 416px;
+  background-position: 0px -298px;
+  background-size: 25px 416px;
 }
 
-.editPostBtnIcon{
-      background-image: url(icons/iconCompilation13.png);
-    background-position: 0px -21px;
-    background-size: 21px 254px;
+.editPostBtnIcon {
+  background-image: url(icons/iconCompilation13.png);
+  background-position: 0px -21px;
+  background-size: 21px 254px;
 }
 
-.editAudienceBtnIcon{
+.editAudienceBtnIcon {
   background-image: url(icons/iconCompilation14.png);
-    background-position: 0px -42px;
-    background-size: 21px 63px;
+  background-position: 0px -42px;
+  background-size: 21px 63px;
 }
 
-.turnOffTranslationsBtnIcon{
-background-image: url(icons/iconCompilation11.png);
-    background-position: 0px -235px;
-    background-size: 25px 273px;
+.turnOffTranslationsBtnIcon {
+  background-image: url(icons/iconCompilation11.png);
+  background-position: 0px -235px;
+  background-size: 25px 273px;
 }
 
-.editDateBtnIcon{
-      background-image: url(icons/iconCompilation15.png);
-    background-position: 0px -130px;
-    background-size: 25px 786px;
+.editDateBtnIcon {
+  background-image: url(icons/iconCompilation15.png);
+  background-position: 0px -130px;
+  background-size: 25px 786px;
 }
 
-.moverToArchiveBtnIcon{
+.moverToArchiveBtnIcon {
   background-image: url(icons/iconCompilation16.png);
-    background-position: 0px -192px;
-    background-size: 25px 415px;
+  background-position: 0px -192px;
+  background-size: 25px 415px;
 }
 
-.moveToTrashBtnIcon{
+.moveToTrashBtnIcon {
   background-image: url(icons/iconCompilation16.png);
-    background-position: 0px -360px;
-    background-size: 25px 415px;
+  background-position: 0px -360px;
+  background-size: 25px 415px;
 }
 
 .postMoreBtnBoxTxts {
@@ -750,7 +750,7 @@ background-image: url(icons/iconCompilation11.png);
   padding: 15px;
   background-color: white;
   display: flex;
-  align-items:flex-start;
+  align-items: flex-start;
   gap: 15px;
   border-top: 1px solid #ebebeb;
   border-bottom-left-radius: 12px;

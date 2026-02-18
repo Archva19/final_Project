@@ -55,7 +55,7 @@ if (activeUser.pageFollowStatus) {
 }
 
 prifleInfoFollowBtn.addEventListener("click", function () {
-  if (activeUser.pageFollowStatus){
+  if (activeUser.pageFollowStatus) {
     displayNotFollowed();
     updateUsers();
   } else {

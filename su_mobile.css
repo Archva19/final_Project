@@ -288,12 +288,12 @@ button {
   padding-inline: 0;
 }
 
-.su_mobGendLabel{
+.su_mobGendLabel {
   width: 100%;
   padding: 15px 20px;
 }
 
-.su_mobGendRadio{
+.su_mobGendRadio {
   margin-right: 20px;
 }
 
@@ -334,7 +334,7 @@ button {
 }
 
 .su_mobP5MobInp,
-.su_mobPassInp, 
+.su_mobPassInp,
 .su_mobP6EmailInp {
   height: 63.3px;
   margin-bottom: 15px;

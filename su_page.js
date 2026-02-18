@@ -279,7 +279,7 @@ class User {
     likedPosts,
     pageFollowStatus,
     pageVisibilityStatus,
-    hiddenPosts
+    hiddenPosts,
   ) {
     this.userId = userId;
     this.firstName = firstName;
@@ -308,7 +308,8 @@ su_formSuBtn.addEventListener("click", function () {
     }
   }
 
-  let birthday = su_formBdYear.value + "-" + su_formBdMon.value + "-" + su_formBdDay.value;
+  let birthday =
+    su_formBdYear.value + "-" + su_formBdMon.value + "-" + su_formBdDay.value;
 
   if (su_formFnInp.value === "") {
     su_formFnErr.classList.remove("hidden");
@@ -422,7 +423,7 @@ su_formSuBtn.addEventListener("click", function () {
       [],
       false,
       true,
-      []
+      [],
     );
     usersArr.push(newUser);
     loggedInUsersArr.push(newUser);

@@ -363,12 +363,12 @@ button {
   border-radius: 1px;
 }
 
-.su_formFnErrMessage{
+.su_formFnErrMessage {
   top: 70px;
   left: 50px;
 }
 
-.su_formFnErrMesArr{
+.su_formFnErrMesArr {
   transform: translateX(-30px) translateY(-7px) rotate(45deg);
 }
 
@@ -394,12 +394,12 @@ button {
 .su_formFnErrMesArr,
 .su_formBdErrMesArr,
 .su_formEmailErrMesArr,
-.su_formPassErrMesArr, 
+.su_formPassErrMesArr,
 .su_formGendErrMesArr {
   transform: translateX(-30px) translateY(-7px) rotate(45deg);
 }
 
-.su_formBdErrMessage{
+.su_formBdErrMessage {
   top: 140px;
   right: 0;
 }
@@ -417,8 +417,7 @@ button {
 .su_formPassErrMessage {
   right: 0;
   top: 307px;
-} 
-
+}
 
 .su_formHelpBox {
   z-index: 1;

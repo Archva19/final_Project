@@ -174,7 +174,6 @@ if (allPhotosContainerImg[8]) {
   allPhotosContainerImg[8].classList.add("borderRadiusBottomRight");
 }
 
-
 // პროფილზე ღილაკების ეფექტები
 
 const profileNavigationBtn = document.querySelectorAll(".profileNavigationBtn");

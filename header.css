@@ -314,14 +314,14 @@
   background-size: 25px 459px;
 }
 
-.logOutBtnArr{
-      background-image: url(icons/iconCompilation9.png);
-    background-position: 0px -133px;
-    background-size: 33px 996px;
-    width: 24px;
-    height: 24px;
-    background-repeat: no-repeat;
-    display: inline-block;
+.logOutBtnArr {
+  background-image: url(icons/iconCompilation9.png);
+  background-position: 0px -133px;
+  background-size: 33px 996px;
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  display: inline-block;
 }
 
 .logOutBtnTxt {
