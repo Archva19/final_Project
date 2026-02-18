@@ -1903,6 +1903,7 @@ function createPost(mainContainer, postsContainer, page, post, postType) {
   });
 
   commentBtn.addEventListener("click", function () {
+    let pagesArr = JSON.parse(localStorage.getItem("pagesArr"));
     const newComment = {
       authorName: activeUser.firstName + " " + activeUser.lastName,
       authorProfImg: activeUser.profileImage,
